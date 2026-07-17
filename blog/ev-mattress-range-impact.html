@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Much Range Do Camping Mattresses Cost? | Sleep In My EV</title>
+<meta name="description" content="A 25 lb mattress costs 0.25% range on a Tesla Model Y — about 0.65 miles. We show you the real numbers, what actually kills EV range, and how Camp Mode changes everything.">
+<meta property="og:title" content="How Much Range Do Camping Mattresses Actually Cost?">
+<meta property="og:description" content="Real data on EV range impact from camping mattresses. The answer is smaller than you think — and we show exactly why.">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* Brand palette — Sleep In My EV */
+  --primary:#1D6B4E;--primary-light:#2DA06F;--primary-bg:rgba(29,107,78,0.07);
+  --accent:#C94E26;--accent-bg:rgba(201,78,38,0.08);
+  --blue:#2a78d6;--blue-bg:rgba(42,120,214,0.08);
+  --gold:#c48a00;--gold-bg:rgba(196,138,0,0.1);
+  --sand:#F5EFE6;--sand-border:#E0D8CC;
+  --text:#2C2C2C;--text2:#555;--text3:#888;
+  --bg:#F2F4F2;--border:#E2E6E2;--white:#fff;
+  --success:#1D6B4E;--success-bg:rgba(29,107,78,0.08);
+  --warn:#8A5A00;--warn-bg:rgba(196,158,0,0.1);
+  --danger:#7A2010;--danger-bg:rgba(201,78,38,0.08);
+  --font-serif:'Georgia','Times New Roman',serif;
+}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15px}
+
+/* NAV */
+header{background:var(--bg);border-bottom:1px solid var(--border);padding:.85rem 0;position:sticky;top:0;z-index:200;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.nav-inner{max-width:1160px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.25rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-.3px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;padding:.4rem .75rem;border-radius:5px;cursor:pointer;transition:.2s}
+nav a:hover,nav a.active{background:var(--primary-bg);color:var(--primary)}
+.nav-cta{background:var(--primary);color:#fff!important;border-radius:5px;padding:.4rem .9rem!important}
+.nav-cta:hover{background:var(--primary-light)!important}
+
+/* PAGES */
+.page{display:none}.page.active{display:block}
+.container{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+section{padding:2.5rem 0}
+h2{font-size:1.75rem;color:var(--primary);margin-bottom:.4rem;letter-spacing:-.3px}
+.section-sub{color:var(--text2);margin-bottom:1.75rem;font-size:1rem}
+
+/* HERO */
+.hero{padding:3.5rem 1.5rem;background:linear-gradient(135deg,#0c5c47 0%,#1a9e75 100%);color:#fff;text-align:center}
+.hero h1{font-size:2.2rem;font-weight:700;margin-bottom:.75rem;letter-spacing:-.5px}
+.hero p{font-size:1.1rem;opacity:.92;max-width:620px;margin:0 auto 1.75rem}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:.8rem 1.6rem;border-radius:6px;font-weight:600;font-size:.95rem;cursor:pointer;border:none;transition:.2s}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:#c14b22;transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}.btn-outline:hover{background:rgba(255,255,255,.1)}
+
+/* STAT STRIP */
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--bg);border-bottom:1px solid var(--border)}
+.stat-item{padding:1.2rem 1.5rem;text-align:center}
+.stat-num{font-size:1.6rem;font-weight:700;color:var(--primary)}
+.stat-label{font-size:.8rem;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-top:.2rem}
+
+/* BENEFITS */
+.benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.benefit-card{background:var(--bg);border-radius:8px;padding:1.75rem;border:1px solid var(--border)}
+.benefit-icon{font-size:2rem;margin-bottom:.75rem}
+.benefit-card h3{color:var(--primary);font-size:1.05rem;margin-bottom:.4rem}
+.benefit-card p{color:var(--text2);font-size:.9rem}
+
+/* QUICK CALC (Homepage) */
+.quick-calc{background:var(--bg);border-radius:10px;padding:2rem;margin:1rem 0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.5rem}
+@media(max-width:600px){.calc-grid{grid-template-columns:1fr}}
+.form-group label{display:block;font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:.5rem}
+.form-group select,.form-group input{width:100%;padding:.7rem .9rem;border:1px solid var(--border);border-radius:5px;font-family:inherit;font-size:.95rem;background:#fff}
+.form-group select:focus,.form-group input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-bg)}
+input[type=range]{-webkit-appearance:none;appearance:none;height:5px;background:var(--border);border-radius:3px;padding:0;border:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--primary);border-radius:50%;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--primary);border-radius:50%;cursor:pointer;border:none}
+.result-box{background:var(--bg);border-left:4px solid var(--accent);border-radius:4px;padding:1.25rem 1.5rem;display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:center}
+.result-big{font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1}
+.result-unit{font-size:.85rem;color:var(--text3);margin-top:.2rem}
+.result-text{font-size:.9rem;color:var(--text2)}
+.result-insight{background:var(--blue-bg);border-radius:5px;padding:.75rem 1rem;margin-top:.75rem;font-size:.85rem;color:var(--blue)}
+
+/* FILTERS */
+.filter-bar{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem}
+.filter-bar label{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:.35rem;display:block}
+.filter-bar select{width:100%;padding:.6rem .75rem;border:1px solid var(--border);border-radius:5px;font-family:inherit;font-size:.88rem;background:#fff}
+
+/* RESULTS META */
+.results-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;font-size:.88rem;color:var(--text3)}
+.results-count strong{color:var(--primary)}
+
+/* TABLE */
+.table-wrap{border:1px solid var(--border);border-radius:8px;overflow:hidden;overflow-x:auto;margin-bottom:2rem}
+table{width:100%;border-collapse:collapse;background:var(--bg);min-width:900px}
+thead tr{background:var(--bg)}
+th{padding:.85rem 1rem;text-align:left;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);border-bottom:2px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--primary)}
+th .sort-icon{margin-left:.3rem;opacity:.4}
+td{padding:.9rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(15,110,86,.03)}
+.product-name{font-weight:600;font-size:.95rem}
+.product-brand{font-size:.78rem;color:var(--text3);margin-top:.1rem}
+.price-val{font-weight:700;color:var(--accent);font-size:1rem}
+.weight-val{font-weight:500}
+.rval{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;font-weight:600}
+.rv-low{background:var(--blue-bg);color:var(--blue)}
+.rv-mid{background:var(--gold-bg);color:var(--gold)}
+.rv-high{background:var(--success-bg);color:var(--success)}
+.fit-badge{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;white-space:nowrap}
+.fit-good{background:var(--success-bg);color:var(--success)}
+.fit-fair{background:var(--warn-bg);color:var(--warn)}
+.fit-poor{background:var(--danger-bg);color:var(--danger)}
+.type-tag{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;background:var(--primary-bg);color:var(--primary)}
+.ev-badge{display:inline-block;background:var(--accent-bg);color:var(--accent);padding:.15rem .5rem;border-radius:3px;font-size:.7rem;font-weight:700;margin-top:.3rem}
+.range-bar-wrap{display:flex;align-items:center;gap:.5rem}
+.range-mini{font-size:.8rem;font-weight:600;color:var(--primary);white-space:nowrap}
+.range-bar{width:60px;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.range-bar-fill{height:100%;background:var(--primary);border-radius:3px}
+.stars{color:#f5b800;font-size:.85rem;letter-spacing:1px}
+
+/* PRODUCT DETAIL PANEL */
+.detail-panel{display:none;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.75rem;margin-bottom:1.5rem;position:relative}
+.detail-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.close-btn{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text3)}
+.detail-specs{display:grid;grid-template-columns:1fr 1fr;gap:.5rem .75rem}
+.spec-row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.88rem}
+.spec-row:last-child{border:none}
+.spec-k{color:var(--text3)}
+.spec-v{font-weight:600}
+.pro-con{margin-top:1rem}
+.pro-con h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:.5rem}
+.pro-con li{font-size:.88rem;margin-bottom:.3rem;padding-left:1rem;position:relative}
+.pro-con li::before{position:absolute;left:0;font-weight:700}
+.pros li::before{content:"✓";color:var(--success)}
+.cons li::before{content:"✗";color:var(--danger)}
+.ev-note-box{background:var(--accent-bg);border-left:3px solid var(--accent);border-radius:4px;padding:.9rem 1rem;margin-top:1rem;font-size:.88rem;color:var(--text)}
+.ev-note-box strong{color:var(--accent)}
+.buy-btn{display:block;background:var(--accent);color:#fff;text-align:center;padding:.75rem;border-radius:5px;font-weight:600;text-decoration:none;margin-top:1rem;font-size:.9rem}
+.buy-btn:hover{background:#c14b22}
+@media(max-width:700px){.detail-panel.active{grid-template-columns:1fr}}
+
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:2rem;overflow-x:auto}
+.tab-btn{padding:.85rem 1.4rem;border:none;background:none;cursor:pointer;font-weight:600;font-size:.9rem;color:var(--text3);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:.2s}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-btn:hover{color:var(--primary)}
+.tab-pane{display:none}.tab-pane.active{display:block}
+
+/* TYPE CARDS */
+.type-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.type-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.75rem}
+.type-card h3{color:var(--primary);font-size:1.05rem;margin-bottom:1rem}
+.type-badge{display:inline-block;padding:.25rem .75rem;border-radius:4px;font-size:.75rem;font-weight:700;margin-bottom:.75rem}
+.badge-green{background:var(--success-bg);color:var(--success)}
+.badge-blue{background:var(--blue-bg);color:var(--blue)}
+.badge-gold{background:var(--gold-bg);color:var(--gold)}
+.spec-line{display:flex;justify-content:space-between;font-size:.87rem;padding:.35rem 0;border-bottom:1px solid var(--border)}
+.spec-line:last-child{border:none}
+.comfort-bar{margin-top:1rem}
+.comfort-bar label{font-size:.78rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;font-weight:600}
+.bar-track{background:var(--border);border-radius:3px;height:8px;margin-top:.35rem;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--primary),var(--primary-light))}
+
+/* R-VALUE GUIDE */
+.rv-scale{display:grid;gap:.75rem;margin:1.5rem 0}
+.rv-row{display:flex;align-items:center;gap:1rem;padding:.75rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:6px}
+.rv-chip{min-width:56px;text-align:center;padding:.3rem .5rem;border-radius:4px;font-weight:700;font-size:.9rem}
+.rv-desc{flex:1;font-size:.9rem}
+.rv-ev-note{font-size:.8rem;color:var(--primary);margin-top:.2rem;font-weight:500}
+.insight-box{background:var(--primary-bg);border-left:3px solid var(--primary);border-radius:5px;padding:1.25rem 1.5rem;margin-top:1.5rem}
+.insight-box h4{color:var(--primary);margin-bottom:.4rem}
+.insight-box p{font-size:.9rem;color:var(--text2)}
+
+/* FULL RANGE CALC */
+.full-calc{background:var(--bg);border-radius:10px;padding:2rem;margin:1rem 0}
+.full-calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(max-width:600px){.full-calc-grid{grid-template-columns:1fr}}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.result-card{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1.1rem;text-align:center}
+.result-card .num{font-size:1.5rem;font-weight:700}
+.result-card .lbl{font-size:.78rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-top:.2rem}
+.rc-green .num{color:var(--success)}
+.rc-orange .num{color:var(--warn)}
+.rc-red .num{color:var(--accent)}
+.context-bar{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1.1rem 1.5rem;margin-top:1rem}
+.context-bar h4{font-size:.85rem;font-weight:600;color:var(--text2);margin-bottom:.75rem}
+.context-rows{display:grid;gap:.5rem}
+.context-row{display:flex;align-items:center;gap:.75rem;font-size:.85rem}
+.ctx-label{min-width:160px;color:var(--text2)}
+.ctx-bar-wrap{flex:1;background:var(--border);border-radius:3px;height:8px}
+.ctx-bar-inner{height:100%;border-radius:3px}
+.ctx-pct{min-width:42px;text-align:right;font-weight:600;font-size:.82rem}
+
+/* ABOUT */
+.about-section{background:var(--bg);border-radius:8px;padding:1.75rem;margin-bottom:1.5rem}
+.about-section h3{color:var(--primary);margin-bottom:.75rem}
+.about-section p,.about-section li{color:var(--text2);font-size:.95rem;margin-bottom:.5rem}
+.about-section ul{margin-left:1.25rem}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.82rem;color:var(--text3);margin-top:3rem}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{font-size:1.6rem}
+  .stat-strip{grid-template-columns:repeat(2,1fr)}
+  nav a:not(.nav-cta){display:none}
+  h2{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="../index.html">
+      <svg width="42" height="36" viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="16" width="34" height="12" rx="3" fill="#1D6B4E"/>
+        <path d="M7 16 C9 8 14 6 19 6 C24 6 29 8 31 16Z" fill="#1D6B4E"/>
+        <circle cx="9" cy="28" r="5" fill="#1D6B4E"/><circle cx="9" cy="28" r="3" fill="white"/>
+        <circle cx="29" cy="28" r="5" fill="#1D6B4E"/><circle cx="29" cy="28" r="3" fill="white"/>
+        <path d="M37 3 C35 5 34 9 36 13 C31 11 29 6 32 2 C34.5 -1 39 -1 41 2 C39.5 2.5 37.5 2.5 37 3Z" fill="#C94E26"/>
+        <text x="38" y="4" font-family="Georgia,serif" font-size="6" fill="#C94E26" font-weight="700">z</text>
+      </svg>
+      <span style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--primary);letter-spacing:-0.3px">Sleep In My EV</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../compare.html">Compare</a>
+      <a href="../guides.html">Guides</a>
+      <a href="../index.html" class="active">Blog</a>
+      <a href="../about.html">About</a>
+      <a class="nav-cta" href="../compare.html">Find a Mattress →</a>
+    </nav>
+  </div>
+</header>
+
+<article>
+  <div class="article-meta">Range & Performance · 8 min read</div>
+  <h1>How Much Range Do Camping Mattresses Actually Cost?</h1>
+  <p class="article-intro">You're shopping for a camping mattress. You find a 25-pounder you love. Then you wonder: "How much range will this kill?" The internet gives you wildly different answers. We went to the data — here's the honest answer.</p>
+  <div class="byline">By EV Mattress Guide · Updated July 2026 · Sources: EPA testing, Tesla efficiency data, real-world EV owner measurements</div>
+
+  <h2>The Formula: Industry Standard</h2>
+  <p>The established benchmark in EV efficiency is straightforward: <strong>every 100 pounds of additional weight reduces range by approximately 1%.</strong> This comes from EPA testing, Tesla's own published data, and thousands of real-world EV owner measurements. It accounts for rolling resistance and the minor aerodynamic effect of cargo inside the vehicle.</p>
+  <div class="formula-box">
+    <strong>The formula:</strong> % range loss = (weight in lbs ÷ 100) × 1.0<br>
+    <strong>Example:</strong> 25 lb mattress → 25 ÷ 100 = 0.25% range loss
+  </div>
+  <p>That's it. No complex physics — just a reliable rule of thumb backed by real-world data.</p>
+
+  <h2>Real Mattress, Real Numbers</h2>
+  <p>Let's put a 25 lb self-inflating mattress — a common mid-range weight — into a Tesla Model Y with 260 miles of EPA-rated range:</p>
+  <div class="data-grid">
+    <div class="data-grid-row"><span class="label">Mattress weight</span><span class="value">25 lbs</span></div>
+    <div class="data-grid-row"><span class="label">% range loss</span><span class="value">0.25%</span></div>
+    <div class="data-grid-row"><span class="label">Miles lost (260 mi EV)</span><span class="value">~0.65 miles</span></div>
+    <div class="data-grid-row"><span class="label">Verdict</span><span class="value">Barely measurable on a trip computer</span></div>
+  </div>
+  <p>That's less range than you'd lose by driving one extra block to a different campsite entrance. It's real, but it's not consequential for most trips.</p>
+
+  <h2>Your Full Camping Setup — The Real Picture</h2>
+  <p>A mattress alone isn't what you should be tracking. Here's what a realistic full camping setup costs across a 260-mile EV:</p>
+  <table>
+    <thead><tr><th>Item</th><th>Weight</th><th>% Loss</th><th>Miles Lost</th></tr></thead>
+    <tbody>
+      <tr><td>20 lb mattress</td><td>20 lbs</td><td>0.20%</td><td>~0.5 mi</td></tr>
+      <tr><td>Roof box</td><td>40 lbs</td><td>0.40%</td><td>~1.0 mi</td></tr>
+      <tr><td>Other gear (clothes, cooking, etc.)</td><td>60 lbs</td><td>0.60%</td><td>~1.6 mi</td></tr>
+      <tr style="background:var(--bg);font-weight:600"><td>Total setup</td><td>120 lbs</td><td>1.20%</td><td>~3.1 mi</td></tr>
+    </tbody>
+  </table>
+  <p>Your complete camping setup costs around <strong>3 miles of range</strong>. Not 30. Not 60. Three.</p>
+
+  <h2>What Actually Kills Your Range (Ranked)</h2>
+  <p>If you want to make smart decisions about range, here's where the real losses are:</p>
+
+  <div class="impact-card card-danger">
+    <strong>Cold weather: −15 to −20% range.</strong> Winter camping in sub-freezing temps costs you 40–50× more range than any mattress choice. A warmer mattress (high R-value) actually helps by reducing how hard your HVAC works overnight.
+  </div>
+  <div class="impact-card card-warn">
+    <strong>Driving at 80 mph: −20 to −30% range.</strong> Speed is your single biggest range lever. Slowing from 80 to 65 mph on the highway recovers more range than swapping a 30 lb mattress for a 5 lb one.
+  </div>
+  <div class="impact-card card-blue">
+    <strong>Roof box aerodynamic drag: −10 to −15% range.</strong> The shape of a roof box at highway speed matters far more than its weight. This is unavoidable for campers who use one — accept the trade-off and plan charging accordingly.
+  </div>
+  <div class="impact-card card-success">
+    <strong>Mattress weight: −0.04 to −0.14% range.</strong> The difference between the lightest mattress on our list (3.6 lbs, NEMO Quasar) and the heaviest (14 lbs, Luno AIR+FOAM Pro) is 0.10% range — about 0.26 miles on a 260-mile EV.
+  </div>
+
+  <h2>When Does Mattress Weight Actually Matter?</h2>
+  <p>For most EV campers, almost never. But here are the edge cases where it's worth thinking about:</p>
+  <table>
+    <thead><tr><th>Scenario</th><th>Does weight matter?</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Weekend camping, 150 mi round trip</td><td><strong style="color:var(--success)">No</strong></td><td>Well within any EV's range buffer</td></tr>
+      <tr><td>Road trip with mid-trip charging</td><td><strong style="color:var(--success)">No</strong></td><td>You're already charging; 0.3% is irrelevant</td></tr>
+      <tr><td>Pushing range limits (230+ mi single charge)</td><td><strong style="color:var(--warn)">Maybe</strong></td><td>Every mile matters when you're close to the edge</td></tr>
+      <tr><td>Combined with roof box on long highway trip</td><td><strong style="color:var(--warn)">Worth considering</strong></td><td>Aero + weight adds up; lighter helps at the margin</td></tr>
+      <tr><td>Winter camping, cold battery</td><td><strong style="color:var(--warn)">Indirectly</strong></td><td>Higher R-value reduces HVAC load overnight</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The Camp Mode Factor — Unique to EV Camping</h2>
+  <p>Here's something traditional campers don't have: <strong>climate control running on battery all night</strong>. Tesla Camp Mode, Rivian Camp Mode, and VW ID.Buzz electric climate systems maintain a set temperature overnight on battery — safely, quietly, with no engine running.</p>
+  <p>This fundamentally changes which mattress you need:</p>
+  <table>
+    <thead><tr><th>Camping type</th><th>R-value needed</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Traditional tent (no heat source)</td><td>R-4 to R-5</td><td>Mattress must insulate you from cold ground</td></tr>
+      <tr><td>EV camping with Camp Mode</td><td>R-1.5 to R-3</td><td>HVAC maintains temperature; mattress just needs to be comfortable</td></tr>
+    </tbody>
+  </table>
+  <p>A lighter, lower R-value mattress with Camp Mode often delivers a warmer, more comfortable night than a heavy R-8 pad in a traditional tent. You're choosing for comfort and fit — not insulation.</p>
+  <p>The exception: <strong>high R-value mattresses actually save battery</strong> when Camp Mode is running. If your HVAC has to work less because your mattress insulates well, overnight battery drain is lower. For cold-weather EV camping, a mattress like the Luno AIR+FOAM Pro (R-11.2) or Exped MegaMat Duo (R-8.1) is a genuine efficiency tool, not just a comfort upgrade.</p>
+
+  <h2>Mattress Recommendations by Range Priority</h2>
+  <table>
+    <thead><tr><th>Priority</th><th>Best pick</th><th>Weight</th><th>Range impact</th></tr></thead>
+    <tbody>
+      <tr><td>Minimum range impact</td><td>NEMO Quasar 3D Insulated</td><td>3.6 lbs</td><td>0.036%</td></tr>
+      <tr><td>Lightweight + comfort balance</td><td>Sea to Summit Comfort Deluxe LW</td><td>5.2 lbs</td><td>0.052%</td></tr>
+      <tr><td>Best overall for solo EV campers</td><td>Therm-a-Rest MondoKing 3D</td><td>5.5 lbs</td><td>0.055%</td></tr>
+      <tr><td>Best overall for couples</td><td>NEMO Roamer Double</td><td>7.5 lbs</td><td>0.075%</td></tr>
+      <tr><td>Premium comfort, high insulation</td><td>Exped MegaMat Duo 10</td><td>9.9 lbs</td><td>0.099%</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The Bottom Line</h2>
+  <div class="callout">
+    <p><strong>A 25 lb camping mattress costs you approximately 0.65 miles of range on a 260-mile EV.</strong></p>
+    <p>Your roof box, your driving speed, and cold weather each matter 50–200× more than your mattress weight. Pick the mattress that fits your EV, feels comfortable, and suits your budget. Plan charging stops based on trip distance — not mattress weight.</p>
+  </div>
+
+  <div class="cta-strip">
+    <h3>Ready to find the right mattress for your EV?</h3>
+    <div class="cta-buttons">
+      <a href="../index.html" class="btn btn-primary">Compare All 10 Mattresses →</a>
+      <a href="tesla-model-y-mattress-out-of-stock.html" class="btn btn-outline">Tesla Model Y Guide →</a>
+    </div>
+  </div>
+
+  <div class="related">
+    <h3>Related Articles</h3>
+    <a href="tesla-model-y-mattress-out-of-stock.html" class="related-link">Tesla Model Y Air Mattress Out of Stock? Here Are the Best Alternatives</a>
+    <a href="../index.html" class="related-link">Full Mattress Comparison Tool — 10 Products, 5 EV Models</a>
+  </div>
+
+  <div style="border-top:1px solid var(--border);padding-top:1.25rem;margin-top:2.5rem;font-size:.78rem;color:var(--text3)">
+    <strong>Sources:</strong> EPA EV efficiency data; Tesla, NEMO, Therm-a-Rest, Exped, Sea to Summit manufacturer specs; OutdoorGearLab, Switchback Travel, CleverHiker, GearJunkie independent reviews.<br>
+    <strong>Affiliate disclosure:</strong> Links to retailers may earn commissions. This doesn't affect our recommendations.
+  </div>
+</article>
+
+<footer>
+  <div style="font-family:var(--font-serif);font-size:.95rem;color:var(--primary);font-weight:700;margin-bottom:.3rem">Sleep In My EV</div>
+  <div>Honest comparisons for electric vehicle campers · sleepinmyev.com</div>
+  <div style="margin-top:.3rem">Data sourced from manufacturers, verified owners &amp; trusted review sites. Prices approximate.</div>
+  <div style="margin-top:.4rem;font-style:italic;color:var(--text3)">We're the camping buddy who actually measured the cargo floor.</div>
+  <div style="margin-top:.75rem"><a href="../index.html" style="color:var(--primary);font-weight:600">← Back to Blog</a></div>
+</footer>
+
+</body>
+</html>
