@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Sleep In My EV</title>
+<meta name="description" content="How we research EV sleeping dimensions, verify mattress specs, and choose which products to list. Methodology, data sources, and affiliate disclosure.">
+<link rel="canonical" href="https://sleepinmyev.com/about.html">
+<meta property="og:title" content="About — Sleep In My EV">
+<meta property="og:description" content="How we research EV sleeping dimensions, verify mattress specs, and choose which products to list. Methodology, data sources, and affiliate disclosure.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sleepinmyev.com/about.html">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* Brand palette — Sleep In My EV */
+  --primary:#1D6B4E;--primary-light:#2DA06F;--primary-bg:rgba(29,107,78,0.07);
+  --accent:#C94E26;--accent-bg:rgba(201,78,38,0.08);
+  --blue:#2a78d6;--blue-bg:rgba(42,120,214,0.08);
+  --gold:#c48a00;--gold-bg:rgba(196,138,0,0.1);
+  --sand:#F5EFE6;--sand-border:#E0D8CC;
+  --text:#2C2C2C;--text2:#555;--text3:#888;
+  --bg:#F2F4F2;--border:#E2E6E2;--white:#fff;
+  --success:#1D6B4E;--success-bg:rgba(29,107,78,0.08);
+  --warn:#8A5A00;--warn-bg:rgba(196,158,0,0.1);
+  --danger:#7A2010;--danger-bg:rgba(201,78,38,0.08);
+  --font-serif:'Georgia','Times New Roman',serif;
+}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);line-height:1.6;font-size:15px}
+
+/* NAV */
+header{background:var(--bg);border-bottom:1px solid var(--border);padding:.85rem 0;position:sticky;top:0;z-index:200;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.nav-inner{max-width:1160px;margin:0 auto;padding:0 1.5rem;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:1.25rem;font-weight:700;color:var(--primary);text-decoration:none;letter-spacing:-.3px}
+.logo span{color:var(--accent)}
+nav a{color:var(--text2);text-decoration:none;font-size:.9rem;font-weight:500;padding:.4rem .75rem;border-radius:5px;cursor:pointer;transition:.2s}
+nav a:hover,nav a.active{background:var(--primary-bg);color:var(--primary)}
+.nav-cta{background:var(--primary);color:#fff!important;border-radius:5px;padding:.4rem .9rem!important}
+.nav-cta:hover{background:var(--primary-light)!important}
+
+/* PAGES */
+.page{display:none}.page.active{display:block}
+.container{max-width:1160px;margin:0 auto;padding:0 1.5rem}
+section{padding:2.5rem 0}
+h2{font-size:1.75rem;color:var(--primary);margin-bottom:.4rem;letter-spacing:-.3px}
+.section-sub{color:var(--text2);margin-bottom:1.75rem;font-size:1rem}
+
+/* HERO */
+.hero{padding:3.5rem 1.5rem;background:linear-gradient(135deg,#0c5c47 0%,#1a9e75 100%);color:#fff;text-align:center}
+.hero h1{font-size:2.2rem;font-weight:700;margin-bottom:.75rem;letter-spacing:-.5px}
+.hero p{font-size:1.1rem;opacity:.92;max-width:620px;margin:0 auto 1.75rem}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:.8rem 1.6rem;border-radius:6px;font-weight:600;font-size:.95rem;cursor:pointer;border:none;transition:.2s}
+.btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:#c14b22;transform:translateY(-1px)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7)}.btn-outline:hover{background:rgba(255,255,255,.1)}
+
+/* STAT STRIP */
+.stat-strip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--bg);border-bottom:1px solid var(--border)}
+.stat-item{padding:1.2rem 1.5rem;text-align:center}
+.stat-num{font-size:1.6rem;font-weight:700;color:var(--primary)}
+.stat-label{font-size:.8rem;color:var(--text3);text-transform:uppercase;letter-spacing:.5px;margin-top:.2rem}
+
+/* BENEFITS */
+.benefit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
+.benefit-card{background:var(--bg);border-radius:8px;padding:1.75rem;border:1px solid var(--border)}
+.benefit-icon{font-size:2rem;margin-bottom:.75rem}
+.benefit-card h3{color:var(--primary);font-size:1.05rem;margin-bottom:.4rem}
+.benefit-card p{color:var(--text2);font-size:.9rem}
+
+/* QUICK CALC (Homepage) */
+.quick-calc{background:var(--bg);border-radius:10px;padding:2rem;margin:1rem 0}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.5rem}
+@media(max-width:600px){.calc-grid{grid-template-columns:1fr}}
+.form-group label{display:block;font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:.5rem}
+.form-group select,.form-group input{width:100%;padding:.7rem .9rem;border:1px solid var(--border);border-radius:5px;font-family:inherit;font-size:.95rem;background:#fff}
+.form-group select:focus,.form-group input:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-bg)}
+input[type=range]{-webkit-appearance:none;appearance:none;height:5px;background:var(--border);border-radius:3px;padding:0;border:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--primary);border-radius:50%;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,.2)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;background:var(--primary);border-radius:50%;cursor:pointer;border:none}
+.result-box{background:var(--bg);border-left:4px solid var(--accent);border-radius:4px;padding:1.25rem 1.5rem;display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:center}
+.result-big{font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1}
+.result-unit{font-size:.85rem;color:var(--text3);margin-top:.2rem}
+.result-text{font-size:.9rem;color:var(--text2)}
+.result-insight{background:var(--blue-bg);border-radius:5px;padding:.75rem 1rem;margin-top:.75rem;font-size:.85rem;color:var(--blue)}
+
+/* FILTERS */
+.filter-bar{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1rem}
+.filter-bar label{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:.35rem;display:block}
+.filter-bar select{width:100%;padding:.6rem .75rem;border:1px solid var(--border);border-radius:5px;font-family:inherit;font-size:.88rem;background:#fff}
+
+/* RESULTS META */
+.results-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;font-size:.88rem;color:var(--text3)}
+.results-count strong{color:var(--primary)}
+
+/* TABLE */
+.table-wrap{border:1px solid var(--border);border-radius:8px;overflow:hidden;overflow-x:auto;margin-bottom:2rem}
+table{width:100%;border-collapse:collapse;background:var(--bg);min-width:900px}
+thead tr{background:var(--bg)}
+th{padding:.85rem 1rem;text-align:left;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);border-bottom:2px solid var(--border);white-space:nowrap;cursor:pointer;user-select:none}
+th:hover{color:var(--primary)}
+th .sort-icon{margin-left:.3rem;opacity:.4}
+td{padding:.9rem 1rem;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(15,110,86,.03)}
+.product-name{font-weight:600;font-size:.95rem}
+.product-brand{font-size:.78rem;color:var(--text3);margin-top:.1rem}
+.price-val{font-weight:700;color:var(--accent);font-size:1rem}
+.weight-val{font-weight:500}
+.rval{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;font-weight:600}
+.rv-low{background:var(--blue-bg);color:var(--blue)}
+.rv-mid{background:var(--gold-bg);color:var(--gold)}
+.rv-high{background:var(--success-bg);color:var(--success)}
+.fit-badge{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;white-space:nowrap}
+.fit-good{background:var(--success-bg);color:var(--success)}
+.fit-fair{background:var(--warn-bg);color:var(--warn)}
+.fit-poor{background:var(--danger-bg);color:var(--danger)}
+.type-tag{display:inline-block;padding:.2rem .6rem;border-radius:4px;font-size:.75rem;font-weight:600;background:var(--primary-bg);color:var(--primary)}
+.ev-badge{display:inline-block;background:var(--accent-bg);color:var(--accent);padding:.15rem .5rem;border-radius:3px;font-size:.7rem;font-weight:700;margin-top:.3rem}
+.range-bar-wrap{display:flex;align-items:center;gap:.5rem}
+.range-mini{font-size:.8rem;font-weight:600;color:var(--primary);white-space:nowrap}
+.range-bar{width:60px;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+.range-bar-fill{height:100%;background:var(--primary);border-radius:3px}
+.stars{color:#f5b800;font-size:.85rem;letter-spacing:1px}
+
+/* PRODUCT DETAIL PANEL */
+.detail-panel{display:none;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.75rem;margin-bottom:1.5rem;position:relative}
+.detail-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.close-btn{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text3)}
+.detail-specs{display:grid;grid-template-columns:1fr 1fr;gap:.5rem .75rem}
+.spec-row{display:flex;justify-content:space-between;padding:.4rem 0;border-bottom:1px solid var(--border);font-size:.88rem}
+.spec-row:last-child{border:none}
+.spec-k{color:var(--text3)}
+.spec-v{font-weight:600}
+.pro-con{margin-top:1rem}
+.pro-con h4{font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:.5rem}
+.pro-con li{font-size:.88rem;margin-bottom:.3rem;padding-left:1rem;position:relative}
+.pro-con li::before{position:absolute;left:0;font-weight:700}
+.pros li::before{content:"✓";color:var(--success)}
+.cons li::before{content:"✗";color:var(--danger)}
+.ev-note-box{background:var(--accent-bg);border-left:3px solid var(--accent);border-radius:4px;padding:.9rem 1rem;margin-top:1rem;font-size:.88rem;color:var(--text)}
+.ev-note-box strong{color:var(--accent)}
+.buy-btn{display:block;background:var(--accent);color:#fff;text-align:center;padding:.75rem;border-radius:5px;font-weight:600;text-decoration:none;margin-top:1rem;font-size:.9rem}
+.buy-btn:hover{background:#c14b22}
+@media(max-width:700px){.detail-panel.active{grid-template-columns:1fr}}
+
+/* TABS */
+.tabs{display:flex;gap:0;border-bottom:2px solid var(--border);margin-bottom:2rem;overflow-x:auto}
+.tab-btn{padding:.85rem 1.4rem;border:none;background:none;cursor:pointer;font-weight:600;font-size:.9rem;color:var(--text3);border-bottom:3px solid transparent;margin-bottom:-2px;white-space:nowrap;transition:.2s}
+.tab-btn.active{color:var(--primary);border-bottom-color:var(--primary)}
+.tab-btn:hover{color:var(--primary)}
+.tab-pane{display:none}.tab-pane.active{display:block}
+
+/* TYPE CARDS */
+.type-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+.type-card{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1.75rem}
+.type-card h3{color:var(--primary);font-size:1.05rem;margin-bottom:1rem}
+.type-badge{display:inline-block;padding:.25rem .75rem;border-radius:4px;font-size:.75rem;font-weight:700;margin-bottom:.75rem}
+.badge-green{background:var(--success-bg);color:var(--success)}
+.badge-blue{background:var(--blue-bg);color:var(--blue)}
+.badge-gold{background:var(--gold-bg);color:var(--gold)}
+.spec-line{display:flex;justify-content:space-between;font-size:.87rem;padding:.35rem 0;border-bottom:1px solid var(--border)}
+.spec-line:last-child{border:none}
+.comfort-bar{margin-top:1rem}
+.comfort-bar label{font-size:.78rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;font-weight:600}
+.bar-track{background:var(--border);border-radius:3px;height:8px;margin-top:.35rem;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--primary),var(--primary-light))}
+
+/* R-VALUE GUIDE */
+.rv-scale{display:grid;gap:.75rem;margin:1.5rem 0}
+.rv-row{display:flex;align-items:center;gap:1rem;padding:.75rem 1rem;background:var(--bg);border:1px solid var(--border);border-radius:6px}
+.rv-chip{min-width:56px;text-align:center;padding:.3rem .5rem;border-radius:4px;font-weight:700;font-size:.9rem}
+.rv-desc{flex:1;font-size:.9rem}
+.rv-ev-note{font-size:.8rem;color:var(--primary);margin-top:.2rem;font-weight:500}
+.insight-box{background:var(--primary-bg);border-left:3px solid var(--primary);border-radius:5px;padding:1.25rem 1.5rem;margin-top:1.5rem}
+.insight-box h4{color:var(--primary);margin-bottom:.4rem}
+.insight-box p{font-size:.9rem;color:var(--text2)}
+
+/* FULL RANGE CALC */
+.full-calc{background:var(--bg);border-radius:10px;padding:2rem;margin:1rem 0}
+.full-calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(max-width:600px){.full-calc-grid{grid-template-columns:1fr}}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.result-card{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1.1rem;text-align:center}
+.result-card .num{font-size:1.5rem;font-weight:700}
+.result-card .lbl{font-size:.78rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-top:.2rem}
+.rc-green .num{color:var(--success)}
+.rc-orange .num{color:var(--warn)}
+.rc-red .num{color:var(--accent)}
+.context-bar{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1.1rem 1.5rem;margin-top:1rem}
+.context-bar h4{font-size:.85rem;font-weight:600;color:var(--text2);margin-bottom:.75rem}
+.context-rows{display:grid;gap:.5rem}
+.context-row{display:flex;align-items:center;gap:.75rem;font-size:.85rem}
+.ctx-label{min-width:160px;color:var(--text2)}
+.ctx-bar-wrap{flex:1;background:var(--border);border-radius:3px;height:8px}
+.ctx-bar-inner{height:100%;border-radius:3px}
+.ctx-pct{min-width:42px;text-align:right;font-weight:600;font-size:.82rem}
+
+/* ABOUT */
+.about-section{background:var(--bg);border-radius:8px;padding:1.75rem;margin-bottom:1.5rem}
+.about-section h3{color:var(--primary);margin-bottom:.75rem}
+.about-section p,.about-section li{color:var(--text2);font-size:.95rem;margin-bottom:.5rem}
+.about-section ul{margin-left:1.25rem}
+
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.82rem;color:var(--text3);margin-top:3rem}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{font-size:1.6rem}
+  .stat-strip{grid-template-columns:repeat(2,1fr)}
+  nav a:not(.nav-cta){display:none}
+  h2{font-size:1.4rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <svg width="42" height="36" viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="16" width="34" height="12" rx="3" fill="#1D6B4E"/>
+        <path d="M7 16 C9 8 14 6 19 6 C24 6 29 8 31 16Z" fill="#1D6B4E"/>
+        <circle cx="9" cy="28" r="5" fill="#1D6B4E"/><circle cx="9" cy="28" r="3" fill="white"/>
+        <circle cx="29" cy="28" r="5" fill="#1D6B4E"/><circle cx="29" cy="28" r="3" fill="white"/>
+        <path d="M37 3 C35 5 34 9 36 13 C31 11 29 6 32 2 C34.5 -1 39 -1 41 2 C39.5 2.5 37.5 2.5 37 3Z" fill="#C94E26"/>
+        <text x="38" y="4" font-family="Georgia,serif" font-size="6" fill="#C94E26" font-weight="700">z</text>
+      </svg>
+      <span style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--primary);letter-spacing:-0.3px">Sleep In My EV</span>
+    </a>
+    <nav>
+      <a href="index.html"       data-page="index.html"   >Home</a>
+      <a href="compare.html"     data-page="compare.html" >Compare</a>
+      <a href="guides.html"      data-page="guides.html"  >Guides</a>
+      <a href="blog/index.html"  data-page="blog"         >Blog</a>
+      <a href="about.html"       data-page="about.html"   class='active'>About</a>
+      <a class="nav-cta" href="compare.html">Find a Mattress →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+    <section style="padding-top:2rem">
+      <h2 style="font-family:var(--font-serif)">About This Guide</h2>
+      <p class="section-sub">EV camping deserves better data than generic gear sites provide.</p>
+      <div class="about-section">
+        <h3>Why We Built This</h3>
+        <p>When we started camping in EVs, we noticed that mainstream mattress reviews don't address range impact, EV-specific fitment, or how Camp Mode changes insulation needs. Traditional guides tell you to buy the warmest, heaviest mattress. For EV campers, that advice is often wrong.</p>
+        <p>This guide focuses exclusively on what EV owners actually need: lightweight options, fitment specs by model, and insulation guidance optimized for vehicles with climate control.</p>
+      </div>
+      <div class="about-section">
+        <h3>Our Data Sources</h3>
+        <ul>
+          <li>Manufacturer websites (Luno, Exped, Therm-a-Rest, NEMO, Sea to Summit, Klymit)</li>
+          <li>EPA efficiency data for range calculations</li>
+        </ul>
+      </div>
+      <div class="about-section">
+        <h3>Range Impact Methodology</h3>
+        <p>We use the industry-standard formula: <strong>100 lbs additional weight ≈ 1% range reduction</strong>. This is derived from EPA testing and real-world EV owner data. It accounts for rolling resistance and minor aerodynamic effects of interior cargo.</p>
+        <p>Note: roof-mounted cargo has additional aerodynamic drag beyond just weight (typically 10-15% extra loss at highway speeds). We calculate mattress weight impact only — not roof box drag.</p>
+      </div>
+   <!--   <div class="about-section">
+        <h3>Affiliate Disclosure</h3>
+        <p>This site earns affiliate commissions on purchases through Amazon and REI. These links don't affect our recommendations. We only list products we'd use ourselves, and we include products across all price ranges including budget options.</p>
+      </div> -->
+      <div class="about-section">
+        <h3>Phase 1 Coverage (Current)</h3>
+        <p>We currently cover 10 mattresses across 3 categories, with fitment data and sleeping dimensions for 22 EV models: Tesla Model Y/3/X/Cybertruck, Hyundai Ioniq 5/6, Kia EV6/EV9, Rivian R1S/R1T/R2, VW ID.4/ID.Buzz, Volvo EX40, BMW iX, Ford Mustang Mach-E/F-150 Lightning, Toyota bZ4X, Subaru Solterra, Chevrolet Bolt EV/Equinox EV, and Polestar 2. More models added regularly.</p>
+      </div>
+    </section>
+  </div>
+
+<footer>
+  <div style="font-family:var(--font-serif);font-size:.95rem;color:var(--primary);font-weight:700;margin-bottom:.3rem">Sleep In My EV</div>
+  <div>Honest comparisons for electric vehicle campers · sleepinmyev.com</div>
+  <div style="margin-top:.3rem">Data sourced from manufacturers, verified owners &amp; trusted review sites. Prices approximate.</div>
+  <div style="margin-top:.4rem;font-style:italic;color:var(--text3)">We're the camping buddy who actually measured the cargo floor.</div>
+</footer>
+
+
+
+<script></script>
+
+
+</body>
+</html>
