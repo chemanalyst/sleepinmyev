@@ -496,7 +496,7 @@ function updateHeightRec(){
   const container = document.getElementById('height-rec-results');
 
   // Sort: comfortable first, then good fit, then tight, then not recommended
-  const order = {Comfortable:0,'Good Fit':1,Tight:2,'Not Recommended':3};
+  const order = {'Comfortable':1,'Good Fit':2,'Tight':3,'Not Recommended':4};
   const sorted = [...evHeightData].sort((a,b)=>{
     const ra = getFitRating(cm,a.L_cm), rb = getFitRating(cm,b.L_cm);
     const orderDiff = (order[ra.label]||3) - (order[rb.label]||3);
