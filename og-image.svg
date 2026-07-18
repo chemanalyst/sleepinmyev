@@ -1,0 +1,70 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Sleep In My EV — Find Your Perfect EV Camping Mattress</title>
+  <desc>OG image for sleepinmyev.com — clean version without stat pills</desc>
+  <rect width="1200" height="630" fill="#1A1A1A"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect x="0" y="0" width="6" height="630" fill="#1D6B4E"/>
+  <rect x="0" y="622" width="1200" height="8" fill="#C94E26"/>
+  <g transform="translate(680, 140)" opacity="0.07">
+    <rect x="0" y="120" width="460" height="110" rx="18" fill="#ffffff"/>
+    <path d="M60 120 C80 55 130 38 210 38 C290 38 360 55 400 120Z" fill="#ffffff"/>
+    <circle cx="85" cy="230" r="52" fill="#ffffff"/><circle cx="85" cy="230" r="32" fill="#1A1A1A"/>
+    <circle cx="375" cy="230" r="52" fill="#ffffff"/><circle cx="375" cy="230" r="32" fill="#1A1A1A"/>
+  </g>
+  <circle cx="950" cy="55" r="2" fill="#ffffff" opacity="0.32"/>
+  <circle cx="990" cy="32" r="1.5" fill="#ffffff" opacity="0.22"/>
+  <circle cx="1020" cy="70" r="1" fill="#ffffff" opacity="0.18"/>
+  <circle cx="1055" cy="42" r="2.5" fill="#ffffff" opacity="0.28"/>
+  <circle cx="1140" cy="80" r="1.5" fill="#ffffff" opacity="0.18"/>
+  <circle cx="1170" cy="48" r="1" fill="#ffffff" opacity="0.20"/>
+  <path d="M1090 52 C1074 67 1068 93 1078 116 C1050 105 1040 78 1052 52 C1062 31 1083 22 1103 29 C1097 33 1091 42 1090 52Z" fill="#C94E26" opacity="0.92"/>
+  <text x="1115" y="46" font-family="Georgia, serif" font-size="30" fill="#C94E26" font-weight="700" opacity="0.85">z</text>
+  <text x="1137" y="28" font-family="Georgia, serif" font-size="20" fill="#C94E26" font-weight="700" opacity="0.55">z</text>
+  <g transform="translate(52, 44)">
+    <rect x="0" y="14" width="42" height="15" rx="3" fill="#1D6B4E"/>
+    <path d="M7 14 C10 7 16 5 21 5 C26 5 32 7 35 14Z" fill="#1D6B4E"/>
+    <circle cx="8" cy="29" r="6" fill="#1D6B4E"/><circle cx="8" cy="29" r="3.5" fill="#1A1A1A"/>
+    <circle cx="34" cy="29" r="6" fill="#1D6B4E"/><circle cx="34" cy="29" r="3.5" fill="#1A1A1A"/>
+    <path d="M38 2 C36 4 35 8 37 12 C33 10 31 6 33 2 C35 -1 39 -1 41 1 C40 1.5 38.5 1.8 38 2Z" fill="#C94E26"/>
+  </g>
+  <text x="108" y="76" font-family="Georgia, serif" font-size="17" fill="#2DA06F" font-weight="700" letter-spacing="0.8">SLEEP IN MY EV</text>
+  <text x="108" y="96" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666666" letter-spacing="1.2">sleepinmyev.com</text>
+  <line x1="52" y1="122" x2="600" y2="122" stroke="#2D2D2D" stroke-width="0.5"/>
+  <text x="52" y="210" font-family="Georgia, serif" font-size="68" fill="#ffffff" font-weight="700" letter-spacing="-1">Find Your Perfect</text>
+  <text x="52" y="290" font-family="Georgia, serif" font-size="68" fill="#1D6B4E" font-weight="700" letter-spacing="-1">EV Camping Mattress</text>
+  <text x="52" y="345" font-family="Helvetica Neue, Arial, sans-serif" font-size="24" fill="#aaaaaa">Verified dimensions. Real specs. No guesswork.</text>
+  <line x1="52" y1="385" x2="660" y2="385" stroke="#2D2D2D" stroke-width="0.5"/>
+  <text x="52" y="430" font-family="Georgia, serif" font-size="18" fill="#555555" font-style="italic">The camping buddy who actually measured the cargo floor.</text>
+  <g transform="translate(740, 280)">
+    <ellipse cx="195" cy="244" rx="175" ry="12" fill="#000000" opacity="0.4"/>
+    <rect x="0" y="100" width="390" height="95" rx="14" fill="#222222" stroke="#1D6B4E" stroke-width="2"/>
+    <path d="M50 100 C68 44 118 28 185 28 C252 28 320 44 342 100Z" fill="#222222" stroke="#1D6B4E" stroke-width="2"/>
+    <path d="M72 98 C86 54 120 42 185 42 C250 42 284 54 318 98Z" fill="#1D6B4E" opacity="0.25"/>
+    <line x1="185" y1="44" x2="193" y2="98" stroke="#1D6B4E" stroke-width="1.5" opacity="0.45"/>
+    <rect x="85" y="76" width="102" height="18" rx="4" fill="#2DA06F" opacity="0.38"/>
+    <rect x="355" y="118" width="28" height="12" rx="4" fill="#C94E26" opacity="0.95"/>
+    <rect x="7" y="118" width="22" height="12" rx="3" fill="#C94E26" opacity="0.65"/>
+    <circle cx="15" cy="155" r="5" fill="#C94E26" opacity="0.85"/>
+    <circle cx="15" cy="155" r="9" fill="none" stroke="#C94E26" stroke-width="1" opacity="0.3"/>
+    <circle cx="78" cy="195" r="46" fill="#111111" stroke="#1D6B4E" stroke-width="2.5"/>
+    <circle cx="78" cy="195" r="28" fill="#222222"/>
+    <circle cx="78" cy="195" r="9" fill="#1D6B4E"/>
+    <circle cx="78" cy="195" r="4" fill="#111111"/>
+    <circle cx="312" cy="195" r="46" fill="#111111" stroke="#1D6B4E" stroke-width="2.5"/>
+    <circle cx="312" cy="195" r="28" fill="#222222"/>
+    <circle cx="312" cy="195" r="9" fill="#1D6B4E"/>
+    <circle cx="312" cy="195" r="4" fill="#111111"/>
+    <path d="M318 -28 C310 -18 308 0 315 16 C300 10 294 -6 301 -22 C307 -35 320 -40 331 -36 C325 -33 318 -28 318 -28Z" fill="#C94E26" opacity="0.85"/>
+    <text x="336" y="-22" font-family="Georgia, serif" font-size="18" fill="#C94E26" font-weight="700" opacity="0.8">z</text>
+    <text x="352" y="-32" font-family="Georgia, serif" font-size="13" fill="#C94E26" font-weight="700" opacity="0.5">z</text>
+    <circle cx="460" cy="30" r="2" fill="#ffffff" opacity="0.35"/>
+    <circle cx="490" cy="10" r="1.5" fill="#ffffff" opacity="0.25"/>
+    <circle cx="430" cy="55" r="1" fill="#ffffff" opacity="0.2"/>
+    <circle cx="470" cy="75" r="1.5" fill="#ffffff" opacity="0.18"/>
+  </g>
+</svg>
