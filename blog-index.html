@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Compare EV Camping Mattresses — Sleep In My EV</title>
-<meta name="description" content="Filter 15 verified camping mattresses by type, price, weight and EV fitment. See which mattresses fit your Tesla Model Y, Ioniq 5, EV9, Rivian R1S and 19 more.">
-<link rel="canonical" href="https://sleepinmyev.com/compare.html">
-<meta property="og:title" content="Compare EV Camping Mattresses — Sleep In My EV">
-<meta property="og:description" content="Filter 15 verified camping mattresses by type, price, weight and EV fitment. See which mattresses fit your Tesla Model Y, Ioniq 5, EV9, Rivian R1S and 19 more.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://sleepinmyev.com/compare.html">
+<title>Blog — EV Camping Guides | Sleep In My EV</title>
+<meta name="description" content="Expert guides on EV camping mattresses, range impact, and sleeping setup tips. Data-driven articles for Tesla, Kia, Hyundai, Rivian and more EV owners.">
+<link rel="canonical" href="https://sleepinmyev.com/blog/">
+<meta property="og:title" content="Blog — EV Camping Guides | Sleep In My EV">
+<meta property="og:description" content="Expert guides on EV camping mattresses, range impact, and sleeping setup tips. Data-driven articles for Tesla, Kia, Hyundai, Rivian and more EV owners.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sleepinmyev.com/blog/">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -222,7 +222,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
 <body>
 <header>
   <div class="nav-inner">
-    <a class="logo" href="index.html">
+    <a class="logo" href="../index.html">
       <svg width="42" height="36" viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <rect x="2" y="16" width="34" height="12" rx="3" fill="#1D6B4E"/>
         <path d="M7 16 C9 8 14 6 19 6 C24 6 29 8 31 16Z" fill="#1D6B4E"/>
@@ -234,168 +234,78 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
       <span style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--primary);letter-spacing:-0.3px">Sleep In My EV</span>
     </a>
     <nav>
-      <a href="index.html"       data-page="index.html"   >Home</a>
-      <a href="compare.html"     data-page="compare.html" class='active'>Compare</a>
-      <a href="guides.html"      data-page="guides.html"  >Guides</a>
-      <a href="blog/blog-index.html"  data-page="blog"         >Blog</a>
-      <a href="about.html"       data-page="about.html"   >About</a>
-      <a class="nav-cta" href="compare.html">Find a Mattress →</a>
+      <a href="../index.html"       data-page="index.html"   >Home</a>
+      <a href="../compare.html"     data-page="compare.html" >Compare</a>
+      <a href="../guides.html"      data-page="guides.html"  >Guides</a>
+      <a href="../blog/blog-index.html"  data-page="blog"         class='active'>Blog</a>
+      <a href="../about.html"       data-page="about.html"   >About</a>
+      <a class="nav-cta" href="../compare.html">Find a Mattress →</a>
     </nav>
   </div>
 </header>
 
 <div class="container">
-    <section style="padding-top:2rem">
-      <h2>Compare All Mattresses</h2>
-      <p class="section-sub">Real specs from manufacturers and trusted review sources. Click any row for full details.</p>
+  <section style="padding-top:2rem;max-width:800px;margin:0 auto">
+    <h2 style="font-family:var(--font-serif)">Blog</h2>
+    <p class="section-sub">Expert guides written for EV campers — real data, no fluff.</p>
+    <div style="display:grid;gap:1.5rem;margin-top:1.5rem">
 
-      <!-- EV ACCORDION SELECTOR -->
-      <div style="background:linear-gradient(135deg,#0c5c47 0%,#1a9e75 100%);border-radius:10px;padding:1.5rem;margin-bottom:1.5rem">
-        <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem">
-          <div style="color:#fff;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.8">Filter by your EV:</div>
-          <select id="f-vehicle" onchange="onEVSelect(this.value)" style="flex:1;min-width:220px;max-width:400px;padding:.7rem 1rem;border:none;border-radius:6px;font-family:inherit;font-size:.95rem;font-weight:500">
-            <option value="">— Show all mattresses —</option>
-            <optgroup label="Tesla">
-              <option value="model_y">Tesla Model Y</option>
-              <option value="model_3">Tesla Model 3</option>
-              <option value="model_x">Tesla Model X</option>
-              <option value="cybertruck">Tesla Cybertruck</option>
-            </optgroup>
-            <optgroup label="Hyundai / Kia">
-              <option value="ioniq5">Hyundai Ioniq 5</option>
-              <option value="ioniq6">Hyundai Ioniq 6</option>
-              <option value="ev9">Kia EV9</option>
-              <option value="kia_ev6">Kia EV6</option>
-            </optgroup>
-            <optgroup label="Rivian">
-              <option value="r1s">Rivian R1S</option>
-              <option value="r1t">Rivian R1T</option>
-              <option value="rivian_r2">Rivian R2</option>
-            </optgroup>
-            <optgroup label="Volkswagen">
-              <option value="id4">VW ID.4</option>
-              <option value="id_buzz">VW ID.Buzz LWB (standard)</option>
-              <option value="id_buzz_tourer">VW ID.Buzz Tourer 2027 ✦</option>
-            </optgroup>
-            <optgroup label="Volvo">
-              <option value="ex40">Volvo EX40</option>
-            </optgroup>
-            <optgroup label="BMW">
-              <option value="ix">BMW iX</option>
-            </optgroup>
-            <optgroup label="Ford">
-              <option value="mach_e">Ford Mustang Mach-E</option>
-              <option value="f150_lightning">Ford F-150 Lightning</option>
-            </optgroup>
-            <optgroup label="Toyota / Subaru">
-              <option value="bz4x">Toyota bZ4X</option>
-              <option value="solterra">Subaru Solterra</option>
-            </optgroup>
-            <optgroup label="Chevrolet">
-              <option value="bolt">Chevrolet Bolt EV</option>
-              <option value="equinox">Chevrolet Equinox EV</option>
-            </optgroup>
-            <optgroup label="Polestar">
-              <option value="polestar2">Polestar 2</option>
-            </optgroup>
-          </select>
-          <button onclick="clearEV()" id="clear-ev-btn" style="display:none;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:5px;padding:.6rem 1rem;font-size:.85rem;font-weight:600;cursor:pointer">✕ Clear</button>
-        </div>
-        <!-- EV mini-profile strip — shown when EV is selected -->
-        <div id="ev-mini-profile" style="display:none;background:rgba(255,255,255,.1);border-radius:6px;padding:1rem 1.25rem">
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:.75rem 1.5rem">
-            <div><div style="color:rgba(255,255,255,.7);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;font-weight:600">Sleep Area</div><div style="color:#fff;font-weight:700;font-size:.95rem" id="mini-dims">—</div></div>
-            <div><div style="color:rgba(255,255,255,.7);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;font-weight:600">Headroom</div><div style="color:#fff;font-weight:700;font-size:.95rem" id="mini-h">—</div></div>
-            <div><div style="color:rgba(255,255,255,.7);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;font-weight:600">Floor Flat</div><div style="color:#fff;font-weight:700;font-size:.95rem" id="mini-flat">—</div></div>
-            <div><div style="color:rgba(255,255,255,.7);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;font-weight:600">Camp Mode</div><div style="color:#fff;font-weight:700;font-size:.95rem" id="mini-camp">—</div></div>
-            <div><div style="color:rgba(255,255,255,.7);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;font-weight:600">Max Mattress</div><div style="color:#fff;font-weight:700;font-size:.95rem" id="mini-mat">—</div></div>
-            <div><div style="color:rgba(255,255,255,.7);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;font-weight:600">Full Profile</div><div><button onclick="viewFullEVProfile()" style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:4px;padding:.3rem .7rem;font-size:.78rem;font-weight:600;cursor:pointer;margin-top:.2rem">View →</button></div></div>
+      <a href="best-ev-for-camping.html" style="text-decoration:none">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:.2s" onmouseover="this.style.boxShadow='0 4px 12px rgba(29,107,78,.12)'" onmouseout="this.style.boxShadow=''">
+          <div style="background:linear-gradient(135deg,#0c5c47 0%,#2a6e2a 100%);padding:1.75rem;color:#fff">
+            <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.7;margin-bottom:.4rem">EV Camping Guide · 10 min read</div>
+            <h3 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:.4rem">Best EV for Camping in 2026 — Ranked by What Actually Matters</h3>
+            <div style="font-size:.9rem;opacity:.85">We verified the sleeping dimensions. Here's the honest ranking.</div>
+          </div>
+          <div style="padding:1.25rem">
+            <p style="color:var(--text2);font-size:.9rem;margin-bottom:1rem">Most guides rank by range. We ranked by verified sleeping length, floor width at the wheel wells, overnight battery drain, and V2L power output. The VW ID.4's result may surprise you.</p>
+            <span style="color:var(--primary);font-weight:600;font-size:.9rem">Read article →</span>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="filter-bar">
-        <div>
-          <label>Mattress Type</label>
-          <select id="f-type" onchange="filterTable()">
-            <option value="">All Types</option>
-            <option value="Inflatable">Inflatable Air</option>
-            <option value="Self-Inflating">Self-Inflating</option>
-            <option value="Hybrid Foam-Air">Hybrid Foam-Air</option>
-          </select>
+      <a href="tesla-model-y-mattress-out-of-stock.html" style="text-decoration:none">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:.2s" onmouseover="this.style.boxShadow='0 4px 12px rgba(29,107,78,.12)'" onmouseout="this.style.boxShadow=''">
+          <div style="background:linear-gradient(135deg,#1a1a1a,#444);padding:1.75rem;color:#fff">
+            <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.7;margin-bottom:.4rem">Tesla Model Y · 6 min read</div>
+            <h3 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:.4rem">Tesla Model Y Air Mattress Out of Stock? Here Are the Best Alternatives</h3>
+            <div style="font-size:.9rem;opacity:.85">Available right now. No Tesla account required.</div>
+          </div>
+          <div style="padding:1.25rem">
+            <p style="color:var(--text2);font-size:.9rem;margin-bottom:1rem">The official Tesla mattress frequently sells out. We compare 5 alternatives that fit the Model Y just as well — some better, some cheaper — and are available today.</p>
+            <span style="color:var(--primary);font-weight:600;font-size:.9rem">Read article →</span>
+          </div>
         </div>
-        <div>
-          <label>Budget</label>
-          <select id="f-price" onchange="filterTable()">
-            <option value="">Any Price</option>
-            <option value="150">Under $150</option>
-            <option value="250">Under $250</option>
-            <option value="350">Under $350</option>
-            <option value="999">$350+</option>
-          </select>
-        </div>
-        <div>
-          <label>Weight</label>
-          <select id="f-weight" onchange="filterTable()">
-            <option value="">Any Weight</option>
-            <option value="6">Under 6 lbs</option>
-            <option value="10">Under 10 lbs</option>
-            <option value="15">Under 15 lbs</option>
-          </select>
-        </div>
-        <div>
-          <label>R-Value Min</label>
-          <select id="f-rv" onchange="filterTable()">
-            <option value="0">Any</option>
-            <option value="2">R-2+</option>
-            <option value="5">R-5+</option>
-            <option value="7">R-7+</option>
-          </select>
-        </div>
-      </div>
+      </a>
 
-      <div class="results-meta">
-        <div>Showing <strong id="count">10</strong> of <strong id="total-count">10</strong> mattresses</div>
-        <div style="font-size:.8rem" id="results-ev-label">💡 Select your EV above to see fit ratings and filter results</div>
-      </div>
+      <a href="ev-mattress-range-impact.html" style="text-decoration:none">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:.2s" onmouseover="this.style.boxShadow='0 4px 12px rgba(29,107,78,.12)'" onmouseout="this.style.boxShadow=''">
+          <div style="background:linear-gradient(135deg,#0c5c47 0%,#1a9e75 100%);padding:1.75rem;color:#fff">
+            <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;opacity:.7;margin-bottom:.4rem">Range &amp; Performance · 8 min read</div>
+            <h3 style="font-family:var(--font-serif);font-size:1.3rem;margin-bottom:.4rem">How Much Range Do Camping Mattresses Actually Cost?</h3>
+            <div style="font-size:.9rem;opacity:.85">A data-driven answer — the real numbers may surprise you.</div>
+          </div>
+          <div style="padding:1.25rem">
+            <p style="color:var(--text2);font-size:.9rem;margin-bottom:1rem">A 25 lb mattress costs 0.25% range on a Model Y — about 0.65 miles. We break down what actually kills your range (hint: it's not the mattress).</p>
+            <span style="color:var(--primary);font-weight:600;font-size:.9rem">Read article →</span>
+          </div>
+        </div>
+      </a>
 
-      <div id="detail-panel" class="detail-panel"></div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Product</th>
-              <th>Type</th>
-              <th onclick="sortBy('price')">Price <span class="sort-icon">↕</span></th>
-              <th onclick="sortBy('weight_lbs')">Weight <span class="sort-icon">↕</span></th>
-              <th onclick="sortBy('rvalue')">R-Value <span class="sort-icon">↕</span></th>
-              <th id="fit-col-header">Fits Your EV</th>
-              <th>Best For</th>
-              <th>Range Impact</th>
-              <th onclick="sortBy('rating')">Rating <span class="sort-icon">↕</span></th>
-            </tr>
-          </thead>
-          <tbody id="tbody"></tbody>
-        </table>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
+</div>
 
 <footer>
   <div style="font-family:var(--font-serif);font-size:.95rem;color:var(--primary);font-weight:700;margin-bottom:.3rem">Sleep In My EV</div>
-  <div>© 2026 sleepinmyev.com · <a href="index.html">Home</a> · <a href="compare.html">Compare</a> · <a href="guides.html">Guides</a> · <a href="blog/blog-index.html">Blog</a> · <a href="about.html">About</a></div>
-  <div style="margin-top:.3rem"><a href="cookies.html">Cookie Policy</a> · <a href="contact.html">Contact & Report an Error</a></div>
+  <div>© 2026 sleepinmyev.com · <a href="../index.html">Home</a> · <a href="../compare.html">Compare</a> · <a href="../guides.html">Guides</a> · <a href="../blog/blog-index.html">Blog</a> · <a href="../about.html">About</a></div>
+  <div style="margin-top:.3rem"><a href="../cookies.html">Cookie Policy</a> · <a href="../contact.html">Contact & Report an Error</a></div>
   <div style="margin-top:.5rem;font-style:italic;color:#aaa">We're the camping buddy who actually measured the cargo floor.</div>
 </footer>
 
 
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  renderTable(mattresses);
-});
-</script>
+<script></script>
 
 <script>
 // ============================================================
@@ -888,24 +798,10 @@ function setActiveNav(){
 document.addEventListener('DOMContentLoaded',setActiveNav);
 
 </script>
-<script>
-
-document.addEventListener('DOMContentLoaded', function(){
-  if(document.getElementById('tbody')) renderTable(mattresses);
-
-  // If arriving with ?ev=key (from guides EV profile button), pre-select that EV
-  var params = new URLSearchParams(window.location.search);
-  var evKey  = params.get('ev');
-  if(evKey){
-    var sel = document.getElementById('f-vehicle');
-    if(sel){ sel.value = evKey; onEVSelect(evKey); }
-  }
-});
-</script>
 
 <!-- Cookie notice banner -->
 <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#2C2C2C;color:#fff;padding:1rem 1.5rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.88rem">
-  <span>We don't currently set any tracking cookies. Affiliate links (REI, Amazon, Luno) may set their own. <a href="cookies.html" style="color:#2DA06F;text-decoration:underline">Cookie Policy</a></span>
+  <span>We don't currently set any tracking cookies. Affiliate links (REI, Amazon, Luno) may set their own. <a href="../cookies.html" style="color:#2DA06F;text-decoration:underline">Cookie Policy</a></span>
   <button onclick="dismissCookieBanner()" style="background:#1D6B4E;color:#fff;border:none;border-radius:5px;padding:.5rem 1.25rem;font-weight:700;cursor:pointer;font-size:.88rem;white-space:nowrap;font-family:inherit">Got it ✓</button>
 </div>
 <script>

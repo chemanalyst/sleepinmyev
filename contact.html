@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Report an Error — Sleep In My EV</title>
+<meta name="description" content="Spotted a wrong spec, outdated price, or incorrect EV dimension on Sleep In My EV? Report it here and help us keep the data accurate.">
+<meta name="robots" content="noindex">
+<style>
+:root{--primary:#1D6B4E;--primary-light:#2DA06F;--accent:#C94E26;--text:#2C2C2C;--text2:#555;--text3:#888;--bg:#F2F4F2;--white:#fff;--border:#E2E6E2;--sand:#F5EFE6;--font-serif:'Georgia','Times New Roman',serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--bg)}
+a{color:var(--primary)}
+header{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.nav-inner{max-width:900px;margin:0 auto;padding:.85rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+nav{display:flex;align-items:center;gap:1.5rem;font-size:.9rem}
+nav a{color:var(--text2);font-weight:500;text-decoration:none}
+nav a:hover{color:var(--primary)}
+.nav-cta{background:var(--accent);color:#fff !important;padding:.45rem 1rem;border-radius:5px;font-weight:600}
+.wrap{max-width:720px;margin:0 auto;padding:2.5rem 1.5rem 4rem}
+h1{font-family:var(--font-serif);font-size:2rem;margin-bottom:.4rem;color:var(--text)}
+.subtitle{font-size:1.05rem;color:var(--text2);margin-bottom:2.5rem}
+h2{font-family:var(--font-serif);font-size:1.2rem;color:var(--primary);margin:2.5rem 0 .75rem;padding-top:.5rem;border-top:1px solid var(--border)}
+
+/* Report form */
+.form-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:2rem;margin-bottom:2rem}
+.form-row{margin-bottom:1.25rem}
+label{display:block;font-weight:600;font-size:.9rem;color:var(--text);margin-bottom:.4rem}
+.label-hint{font-weight:400;color:var(--text3);font-size:.82rem;margin-left:.4rem}
+input[type=text],input[type=email],select,textarea{width:100%;padding:.75rem 1rem;border:1.5px solid var(--border);border-radius:6px;font-family:inherit;font-size:.95rem;color:var(--text);background:#fff;transition:.15s}
+input[type=text]:focus,input[type=email]:focus,select:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(29,107,78,.1)}
+textarea{resize:vertical;min-height:110px}
+.form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.submit-btn{background:var(--primary);color:#fff;border:none;border-radius:7px;padding:.9rem 2rem;font-size:1rem;font-weight:700;cursor:pointer;width:100%;font-family:inherit;transition:.2s;margin-top:.5rem}
+.submit-btn:hover{background:#155a3e}
+.success-box{display:none;background:rgba(29,107,78,.08);border:1px solid rgba(29,107,78,.25);border-radius:8px;padding:1.25rem 1.5rem;text-align:center;color:var(--primary)}
+.success-box strong{display:block;font-size:1.05rem;margin-bottom:.3rem}
+
+/* Contact options */
+.contact-options{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.contact-card{background:#fff;border:1px solid var(--border);border-radius:8px;padding:1.25rem;text-align:center;text-decoration:none;transition:.2s}
+.contact-card:hover{border-color:var(--primary);box-shadow:0 3px 10px rgba(29,107,78,.1);text-decoration:none}
+.contact-icon{font-size:1.75rem;margin-bottom:.4rem}
+.contact-label{font-weight:700;color:var(--text);font-size:.95rem;display:block}
+.contact-sub{color:var(--text3);font-size:.82rem;margin-top:.2rem}
+
+/* Types of reports */
+.report-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin:1rem 0}
+.report-type{background:var(--sand);border-left:3px solid var(--accent);border-radius:4px;padding:.75rem 1rem;font-size:.88rem}
+.report-type strong{display:block;color:var(--text);margin-bottom:.2rem;font-size:.85rem}
+.report-type span{color:var(--text2)}
+
+footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;font-size:.85rem;color:var(--text3)}
+footer a{color:var(--primary)}
+@media(max-width:640px){
+  .wrap{padding:1.5rem 1rem 3rem}
+  .form-row-2{grid-template-columns:1fr}
+  .contact-options{grid-template-columns:1fr}
+  .nav-inner nav a:not(.nav-cta){display:none}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav-inner">
+    <a class="logo" href="index.html">
+      <svg width="38" height="32" viewBox="0 0 42 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="16" width="34" height="12" rx="3" fill="#1D6B4E"/>
+        <path d="M7 16 C9 8 14 6 19 6 C24 6 29 8 31 16Z" fill="#1D6B4E"/>
+        <circle cx="9" cy="28" r="5" fill="#1D6B4E"/><circle cx="9" cy="28" r="3" fill="#F2F4F2"/>
+        <circle cx="29" cy="28" r="5" fill="#1D6B4E"/><circle cx="29" cy="28" r="3" fill="#F2F4F2"/>
+        <path d="M37 3 C35 5 34 9 36 13 C31 11 29 6 32 2 C34.5 -1 39 -1 41 2 C39.5 2.5 37.5 2.5 37 3Z" fill="#C94E26"/>
+      </svg>
+      <span style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--primary)">Sleep In My EV</span>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="compare.html">Compare</a>
+      <a href="guides.html">Guides</a>
+      <a href="blog/blog-index.html">Blog</a>
+      <a href="about.html">About</a>
+      <a class="nav-cta" href="compare.html">Find a Mattress →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h1>Contact & Report an Error</h1>
+  <p class="subtitle">Spotted a wrong spec, outdated price, or incorrect EV dimension? We want to know. Accuracy is what makes this site useful.</p>
+
+  <div class="report-types">
+    <div class="report-type"><strong>Wrong spec or R-value</strong><span>Incorrect mattress spec, R-value, weight, or thickness</span></div>
+    <div class="report-type"><strong>Wrong EV dimension</strong><span>Sleeping length, width, or headroom doesn't match your measurements</span></div>
+    <div class="report-type"><strong>Broken or wrong URL</strong><span>Buy link goes to wrong product or returns 404</span></div>
+    <div class="report-type"><strong>Price change</strong><span>Listed price is significantly different from current retail</span></div>
+    <div class="report-type"><strong>Discontinued product</strong><span>Mattress or pad is no longer sold</span></div>
+    <div class="report-type"><strong>Something else</strong><span>General feedback, suggestion, or other correction</span></div>
+  </div>
+
+  <h2>Report a Data Error</h2>
+
+  <div class="form-card">
+    <div id="success-box" class="success-box">
+      <strong>✓ Report received — thank you!</strong>
+      We'll verify and update the data within a few days. EV campers helping each other get accurate specs is exactly what this site is about.
+    </div>
+
+    <div id="report-form">
+      <div class="form-row-2">
+        <div class="form-row" style="margin-bottom:0">
+          <label>What type of error? <span class="label-hint">required</span></label>
+          <select id="error-type">
+            <option value="">— Select —</option>
+            <option>Wrong mattress spec (R-value, weight, thickness)</option>
+            <option>Wrong EV sleeping dimension</option>
+            <option>Broken or wrong buy link</option>
+            <option>Price is outdated</option>
+            <option>Product discontinued</option>
+            <option>Fit rating seems wrong for my EV</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="form-row" style="margin-bottom:0">
+          <label>Which product or EV? <span class="label-hint">required</span></label>
+          <input type="text" id="product-name" placeholder="e.g. NEMO Roamer Double / Tesla Model Y">
+        </div>
+      </div>
+
+      <div class="form-row" style="margin-top:1.25rem">
+        <label>What's wrong — and what's the correct value? <span class="label-hint">required</span></label>
+        <textarea id="error-detail" placeholder="e.g. The R-value for the MondoKing is listed as 8.0 but the correct value is 7.0 — confirmed on thermarest.com and REI.&#10;&#10;Or: My VW ID.4 measures 76&quot; floor length, not 77&quot; as listed."></textarea>
+      </div>
+
+      <div class="form-row-2">
+        <div class="form-row" style="margin-bottom:0">
+          <label>Your source <span class="label-hint">optional but helpful</span></label>
+          <input type="text" id="source" placeholder="e.g. rei.com/product/... or owner measurement">
+        </div>
+        <div class="form-row" style="margin-bottom:0">
+          <label>Your email <span class="label-hint">optional — for follow-up only</span></label>
+          <input type="email" id="email" placeholder="you@example.com">
+        </div>
+      </div>
+
+      <button class="submit-btn" onclick="submitReport()">Send Report →</button>
+    </div>
+  </div>
+<!--
+  <h2>Other Ways to Reach Us</h2>
+
+  <div class="contact-options">
+    <a class="contact-card" href="mailto:hello@sleepinmyev.com">
+      <div class="contact-icon">✉️</div>
+      <span class="contact-label">Email</span>
+      <div class="contact-sub"></div>
+    </a>
+    <a class="contact-card" href="https://reddit.com/r/electricvehicles" target="_blank" rel="noopener">
+      <div class="contact-icon">💬</div>
+      <span class="contact-label">Reddit</span>
+      <div class="contact-sub">r/electricvehicles · tag us or DM</div>
+    </a>
+  </div>
+-->
+  <h2>Our Commitment to Accuracy</h2>
+  <p>Every spec on this site has been verified against at least one primary source — manufacturer pages, retailer listings, or owner-verified measurements from EV communities. When we receive a correction report we verify it independently before updating, and we note the correction in our changelog.</p>
+  <p>If you own an EV and have measured your actual sleeping dimensions, that owner data is the most valuable kind. We'll credit your EV model in the notes if you share your measurements.</p>
+
+</div>
+
+<footer>
+  <div style="font-family:var(--font-serif);font-size:.95rem;color:var(--primary);font-weight:700;margin-bottom:.3rem">Sleep In My EV</div>
+  <div>sleepinmyev.com · <a href="about.html">About</a> · <a href="cookies.html">Cookie Policy</a> · <a href="contact.html">Contact</a></div>
+  <div style="margin-top:.4rem;font-style:italic;color:#aaa">We're the camping buddy who actually measured the cargo floor.</div>
+</footer>
+
+<script>
+function submitReport(){
+  var type    = document.getElementById('error-type').value;
+  var product = document.getElementById('product-name').value.trim();
+  var detail  = document.getElementById('error-detail').value.trim();
+
+  if(!type || !product || !detail){
+    alert('Please fill in the error type, product name, and description before sending.');
+    return;
+  }
+
+  // Build mailto link as fallback (no backend on static site)
+  var source  = document.getElementById('source').value.trim();
+  var email   = document.getElementById('email').value.trim();
+  var subject = encodeURIComponent('Data correction: ' + product);
+  var body    = encodeURIComponent(
+    'Error type: ' + type + '\n' +
+    'Product / EV: ' + product + '\n\n' +
+    'What is wrong / correct value:\n' + detail + '\n\n' +
+    (source ? 'Source: ' + source + '\n' : '') +
+    (email  ? 'Reply to: ' + email : '')
+  );
+
+  // Open email client
+  window.location.href = 'mailto:sleepinmyev@gmail.com?subject=' + subject + '&body=' + body;
+
+  // Show success message after short delay
+  setTimeout(function(){
+    document.getElementById('report-form').style.display = 'none';
+    document.getElementById('success-box').style.display = 'block';
+  }, 800);
+}
+</script>
+
+</body>
+</html>

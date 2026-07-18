@@ -213,6 +213,11 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
   h2{font-size:1.4rem}
 }
 </style>
+<meta property="og:image" content="https://sleepinmyev.com/og-image.svg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://sleepinmyev.com/og-image.svg">
 </head>
 <body>
 <header>
@@ -232,7 +237,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
       <a href="index.html"       data-page="index.html"   >Home</a>
       <a href="compare.html"     data-page="compare.html" >Compare</a>
       <a href="guides.html"      data-page="guides.html"  >Guides</a>
-      <a href="blog/index.html"  data-page="blog"         >Blog</a>
+      <a href="blog/blog-index.html"  data-page="blog"         >Blog</a>
       <a href="about.html"       data-page="about.html"   class='active'>About</a>
       <a class="nav-cta" href="compare.html">Find a Mattress →</a>
     </nav>
@@ -252,7 +257,10 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
         <h3>Our Data Sources</h3>
         <ul>
           <li>Manufacturer websites (Luno, Exped, Therm-a-Rest, NEMO, Sea to Summit, Klymit)</li>
+          <li>Trusted review sources (OutdoorGearLab, Switchback Travel, CleverHiker, GearJunkie, BetterTrail)</li>
+          <li>REI and Amazon for pricing verification and user reviews</li>
           <li>EPA efficiency data for range calculations</li>
+          <li>EV owner communities (Reddit: r/TeslaLounge, r/Ioniq5, r/electricvehicles)</li>
         </ul>
       </div>
       <div class="about-section">
@@ -260,22 +268,22 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
         <p>We use the industry-standard formula: <strong>100 lbs additional weight ≈ 1% range reduction</strong>. This is derived from EPA testing and real-world EV owner data. It accounts for rolling resistance and minor aerodynamic effects of interior cargo.</p>
         <p>Note: roof-mounted cargo has additional aerodynamic drag beyond just weight (typically 10-15% extra loss at highway speeds). We calculate mattress weight impact only — not roof box drag.</p>
       </div>
-   <!--   <div class="about-section">
+      <div class="about-section">
         <h3>Affiliate Disclosure</h3>
         <p>This site earns affiliate commissions on purchases through Amazon and REI. These links don't affect our recommendations. We only list products we'd use ourselves, and we include products across all price ranges including budget options.</p>
-      </div> -->
+      </div>
       <div class="about-section">
         <h3>Phase 1 Coverage (Current)</h3>
-        <p>We currently cover 10 mattresses across 3 categories, with fitment data and sleeping dimensions for 22 EV models: Tesla Model Y/3/X/Cybertruck, Hyundai Ioniq 5/6, Kia EV6/EV9, Rivian R1S/R1T/R2, VW ID.4/ID.Buzz, Volvo EX40, BMW iX, Ford Mustang Mach-E/F-150 Lightning, Toyota bZ4X, Subaru Solterra, Chevrolet Bolt EV/Equinox EV, and Polestar 2. More models added regularly.</p>
+        <p>We currently cover 17 mattresses across 5 categories, with fitment data and sleeping dimensions for 22 EV models: Tesla Model Y/3/X/Cybertruck, Hyundai Ioniq 5/6, Kia EV6/EV9, Rivian R1S/R1T/R2, VW ID.4/ID.Buzz, Volvo EX40, BMW iX, Ford Mustang Mach-E/F-150 Lightning, Toyota bZ4X, Subaru Solterra, Chevrolet Bolt EV/Equinox EV, and Polestar 2. More models added regularly.</p>
       </div>
     </section>
   </div>
 
 <footer>
   <div style="font-family:var(--font-serif);font-size:.95rem;color:var(--primary);font-weight:700;margin-bottom:.3rem">Sleep In My EV</div>
-  <div>Honest comparisons for electric vehicle campers · sleepinmyev.com</div>
-  <div style="margin-top:.3rem">Data sourced from manufacturers, verified owners &amp; trusted review sites. Prices approximate.</div>
-  <div style="margin-top:.4rem;font-style:italic;color:var(--text3)">We're the camping buddy who actually measured the cargo floor.</div>
+  <div>© 2026 sleepinmyev.com · <a href="index.html">Home</a> · <a href="compare.html">Compare</a> · <a href="guides.html">Guides</a> · <a href="blog/blog-index.html">Blog</a> · <a href="about.html">About</a></div>
+  <div style="margin-top:.3rem"><a href="cookies.html">Cookie Policy</a> · <a href="contact.html">Contact & Report an Error</a></div>
+  <div style="margin-top:.5rem;font-style:italic;color:#aaa">We're the camping buddy who actually measured the cargo floor.</div>
 </footer>
 
 
@@ -283,5 +291,33 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
 <script></script>
 
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a[data-page]').forEach(function(a){
+    if(a.getAttribute('data-page') === path) a.classList.add('active');
+  });
+});
+</script>
+
+<!-- Cookie notice banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#2C2C2C;color:#fff;padding:1rem 1.5rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.88rem">
+  <span>We don't currently set any tracking cookies. Affiliate links (REI, Amazon, Luno) may set their own. <a href="cookies.html" style="color:#2DA06F;text-decoration:underline">Cookie Policy</a></span>
+  <button onclick="dismissCookieBanner()" style="background:#1D6B4E;color:#fff;border:none;border-radius:5px;padding:.5rem 1.25rem;font-weight:700;cursor:pointer;font-size:.88rem;white-space:nowrap;font-family:inherit">Got it ✓</button>
+</div>
+<script>
+(function(){
+  if(!localStorage.getItem('cookie-ok')){
+    var b=document.getElementById('cookie-banner');
+    if(b) b.style.display='flex';
+  }
+})();
+function dismissCookieBanner(){
+  localStorage.setItem('cookie-ok','1');
+  var b=document.getElementById('cookie-banner');
+  if(b) b.style.display='none';
+}
+</script>
 </body>
 </html>
