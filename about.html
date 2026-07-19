@@ -216,8 +216,19 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
 
 /* RESPONSIVE */
 @media(max-width:768px){
+  .hamburger{display:flex!important}
   .hero h1{font-size:1.6rem}
   .stat-strip{grid-template-columns:repeat(2,1fr)}
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;border:none;background:transparent;z-index:210}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid var(--primary);box-shadow:0 4px 16px rgba(0,0,0,.12);z-index:200;padding:.75rem 1.5rem 1rem;flex-direction:column;gap:.25rem}
+  .mobile-menu.open{display:flex}
+  .mobile-menu a{color:var(--text2);text-decoration:none;font-size:1rem;font-weight:500;padding:.65rem .5rem;border-bottom:1px solid var(--border)}
+  .mobile-menu a:last-child{border-bottom:none}
+  .mobile-menu .nav-cta{background:var(--primary);color:#fff!important;border-radius:6px;padding:.75rem 1rem;text-align:center;margin-top:.25rem;border:none}
   nav a:not(.nav-cta){display:none}
   h2{font-size:1.4rem}
 }
@@ -263,7 +274,11 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
       <a href="about.html"       data-page="about.html"   class='active'>About</a>
       <a class="nav-cta" href="compare.html">Find a Mattress →</a>
     </nav>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+  <div class="mobile-menu" id="mobile-menu"></div>
 </header>
 
 <div class="container">
@@ -278,7 +293,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
       <div class="about-section">
         <h3>Our Data Sources</h3>
         <ul>
-          <li>Manufacturer websites (Luno, Exped, Therm-a-Rest, NEMO, Sea to Summit, Klymit, etc)</li>
+          <li>Manufacturer websites (Luno, Exped, Therm-a-Rest, NEMO, Sea to Summit, Klymit, etc.)</li>
           <li>EPA efficiency data for range calculations</li>
         </ul>
       </div>
@@ -287,14 +302,14 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
         <p>We use the industry-standard formula: <strong>100 lbs additional weight ≈ 1% range reduction</strong>. This is derived from EPA testing and real-world EV owner data. It accounts for rolling resistance and minor aerodynamic effects of interior cargo.</p>
         <p>Note: roof-mounted cargo has additional aerodynamic drag beyond just weight (typically 10-15% extra loss at highway speeds). We calculate mattress weight impact only — not roof box drag.</p>
       </div>
-  <!--    <div class="about-section">
+ <!--     <div class="about-section">
         <h3>Affiliate Disclosure</h3>
         <p>This site earns affiliate commissions on purchases through Amazon and REI. These links don't affect our recommendations. We only list products we'd use ourselves, and we include products across all price ranges including budget options.</p>
       </div>
+      <div class="about-section"> 
 -->
-      <div class="about-section">
         <h3>Phase 1 Coverage (Current)</h3>
-        <p>We currently cover multiple mattresses across 5 categories, with fitment data and sleeping dimensions for most popular EV models: Tesla, Hyundai, Kia, Rivian, VW, Volvo, BMW, Ford, Toyota, Subaru, Chevrolet, etc. More models added regularly.</p>
+        <p>We currently cover multiple mattresses across 5 categories, with fitment data and sleeping dimensions for popular EV models: Tesla Model Y/3/X/Cybertruck, Hyundai Ioniq 5/6/9, Kia EV6/EV9, Rivian R1S/R1T/R2, VW ID.4/ID.Buzz, Volvo EX40, BMW iX, Ford Mustang Mach-E/F-150 Lightning, Toyota bZ4X, Subaru Solterra/Trailseeker, Chevrolet Bolt EV/Equinox EV/Blazer EV, Nissan Ariya, Polestar 2, Vinfast VF8/9. More models added regularly.</p>
       </div>
     </section>
   </div>
@@ -384,5 +399,41 @@ function rejectCookies(){
   document.getElementById('cookie-banner').style.display='none';
 }
 </script>
+<script>
+function toggleMobileMenu(){
+  var btn=document.getElementById('hamburger');
+  var menu=document.getElementById('mobile-menu');
+  if(!btn||!menu) return;
+  var isOpen=menu.classList.contains('open');
+  btn.classList.toggle('open',!isOpen);
+  menu.classList.toggle('open',!isOpen);
+}
+// Close menu when a link is clicked
+document.addEventListener('DOMContentLoaded',function(){
+  var menu=document.getElementById('mobile-menu');
+  if(!menu) return;
+  // Clone nav links into mobile menu
+  var navLinks=document.querySelectorAll('header nav a');
+  navLinks.forEach(function(a){
+    var clone=a.cloneNode(true);
+    menu.appendChild(clone);
+  });
+  // Close on link click
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    });
+  });
+  // Close on outside click
+  document.addEventListener('click',function(e){
+    var h=document.getElementById('hamburger');
+    var m=document.getElementById('mobile-menu');
+    if(h&&m&&!h.contains(e.target)&&!m.contains(e.target)){
+      h.classList.remove('open');
+      m.classList.remove('open');
+    }
+  });
+});</script>
 </body>
 </html>

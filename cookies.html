@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN0PS8WNR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7FN0PS8WNR');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cookie Policy — Sleep In My EV</title>
@@ -54,6 +45,20 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 .footer-legal a{color:var(--text3);text-decoration:underline}
 .footer-legal a:hover{color:var(--primary)}
 
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;border:none;background:transparent;z-index:210}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid var(--primary);box-shadow:0 4px 16px rgba(0,0,0,.12);z-index:200;padding:.75rem 1.5rem 1rem;flex-direction:column;gap:.25rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text2);text-decoration:none;font-size:1rem;font-weight:500;padding:.65rem .5rem;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .nav-cta{background:var(--primary);color:#fff!important;border-radius:6px;padding:.75rem 1rem;text-align:center;margin-top:.25rem;border:none}
+@media(max-width:768px){
+  .hamburger{display:flex!important}
+  .hamburger{display:none}
+}
 </style>
 </head>
 <body>
@@ -77,6 +82,11 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
       <a href="about.html">About</a>
       <a class="nav-cta" href="compare.html">Find a Mattress →</a>
     </nav>
+    <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
   </div>
 </header>
 
@@ -96,7 +106,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
   <table>
     <thead><tr><th>Cookie / Tracker</th><th>Type</th><th>Purpose</th><th>Status</th></tr></thead>
     <tbody>
-      <tr><td>Google Analytics</td><td>Third-party analytics</td><td>Page views, session data, traffic sources — all anonymised</td><td><span class="tag">Consent-only</span></td></tr>
+      <tr><td>Google Analytics (_ga, _gid)</td><td>Third-party analytics</td><td>Page views, session data, traffic sources — all anonymised</td><td><span class="tag">Consent-only</span></td></tr>
       <tr><td>Advertising / retargeting</td><td>Third-party</td><td>Ad targeting</td><td><span class="tag tag-none">Not used</span></td></tr>
       <tr><td>Affiliate link tracking</td><td>Third-party</td><td>Commission tracking on REI, Amazon, Luno</td><td><span class="tag">Via retailer</span></td></tr>
       <tr><td>Cookie consent preference</td><td>First-party (localStorage)</td><td>Remembers your Accept / Decline choice</td><td><span class="tag">Always</span></td></tr>
@@ -109,6 +119,8 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
   <h2>Your Consent</h2>
   <p>When you first visit the site, a banner asks you to accept or decline cookies. If you accept, Google Analytics loads and begins collecting anonymised data. If you decline, no analytics cookies are set. You can change your choice at any time by clearing your browser's localStorage for this site, or by using your browser's cookie controls.</p>
 
+  <h2>GitHub Pages</h2>
+  <p>This site is hosted on GitHub Pages. GitHub may collect some technical data (such as IP addresses) for security and performance purposes. See <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub's Privacy Statement</a> for details.</p>
 
   <h2>Your Controls</h2>
   <p>You can control cookies through your browser settings. Most browsers allow you to block, delete, or be notified about cookies. Note that blocking cookies may affect how some websites you visit work — but since we set none, it won't affect this site.</p>
@@ -120,7 +132,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
   </ul>
 
   <h2>Contact</h2>
-  <p>Questions about this policy? Use our <a href="contact.html">contact page.</a></p>
+  <p>Questions about this policy? Use our <a href="contact.html">contact page</a> or email <a href="mailto:hello@sleepinmyev.com">hello@sleepinmyev.com</a>.</p>
 </div>
 
 <footer>
