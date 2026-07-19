@@ -200,6 +200,77 @@ function renderAllEVTable(){
   }).join('');
 }
 
+
+function evFloorDiagram(e){
+  // Scale: max 340px wide, 200px tall in the SVG canvas
+  var svgW=360, svgH=220;
+  var padX=30, padY=25;
+  var maxW=300, maxH=170;
+
+  // Scale L and W to fit
+  var scaleL = Math.min(maxH/e.L, maxW/e.W);
+  var floorW = Math.round(e.W * scaleL);
+  var floorL = Math.round(e.L * scaleL);
+  var x0 = Math.round((svgW - floorW)/2);
+  var y0 = Math.round((svgH - floorL)/2);
+
+  // Headroom colour
+  var hColor = e.H>=40?'#1D6B4E':e.H>=28?'#c47a00':'#C94E26';
+
+  // Human silhouette height (6ft = 72in reference)
+  var personH = Math.round(72 * scaleL);
+  var personW = Math.round(20 * scaleL);
+  var personX = x0 + Math.round((floorW - personW)/2);
+  var personY = y0 + Math.round((floorL - personH)/2);
+  // Clamp person to floor
+  var pY = Math.max(y0, personY);
+  var pH = Math.min(personH, floorL);
+
+  // Wheel arches (approx 8in each side)
+  var archW = Math.round(8 * scaleL);
+  var archH = Math.round(20 * scaleL);
+  var archY = y0 + floorL - archH - Math.round(5*scaleL);
+
+  return '<svg width="100%" viewBox="0 0 '+svgW+' '+svgH+'" xmlns="http://www.w3.org/2000/svg" style="font-family:Arial,sans-serif">'
+    // Background
+    +'<rect width="'+svgW+'" height="'+svgH+'" fill="var(--bg)" rx="6"/>'
+    // Floor area
+    +'<rect x="'+x0+'" y="'+y0+'" width="'+floorW+'" height="'+floorL+'" rx="4" fill="#e8f5ef" stroke="#1D6B4E" stroke-width="2"/>'
+    // Wheel arches
+    +'<rect x="'+x0+'" y="'+archY+'" width="'+archW+'" height="'+archH+'" rx="'+Math.round(archW/2)+'" fill="#c8e0d0" stroke="#1D6B4E" stroke-width="1"/>'
+    +'<rect x="'+( x0+floorW-archW)+'" y="'+archY+'" width="'+archW+'" height="'+archH+'" rx="'+Math.round(archW/2)+'" fill="#c8e0d0" stroke="#1D6B4E" stroke-width="1"/>'
+    // Hatch line (rear opening)
+    +'<line x1="'+x0+'" y1="'+y0+'" x2="'+( x0+floorW)+'" y2="'+y0+'" stroke="#C94E26" stroke-width="2.5" stroke-dasharray="5,3"/>'
+    +'<text x="'+( x0+floorW/2)+'" y="'+( y0-6)+'" text-anchor="middle" font-size="9" fill="#C94E26" font-weight="700">REAR HATCH</text>'
+    // Seat fold line (front edge)
+    +'<line x1="'+x0+'" y1="'+( y0+floorL)+'" x2="'+( x0+floorW)+'" y2="'+( y0+floorL)+'" stroke="#888" stroke-width="1.5" stroke-dasharray="4,3"/>'
+    +'<text x="'+( x0+floorW/2)+'" y="'+( y0+floorL+12)+'" text-anchor="middle" font-size="9" fill="#888">FRONT SEATS</text>'
+    // Human silhouette (simplified)
+    +(pH>10
+      ? '<rect x="'+personX+'" y="'+pY+'" width="'+personW+'" height="'+pH+'" rx="'+Math.round(personW/4)+'" fill="#1D6B4E" opacity="0.35"/>'
+        +'<circle cx="'+( personX+Math.round(personW/2))+'" cy="'+( pY-Math.round(personW*0.6))+'" r="'+Math.round(personW*0.55)+'" fill="#1D6B4E" opacity="0.35"/>'
+      : '')
+    // Dimension labels
+    // Width arrow
+    +'<line x1="'+x0+'" y1="'+( y0+floorL+22)+'" x2="'+( x0+floorW)+'" y2="'+( y0+floorL+22)+'" stroke="#555" stroke-width="1"/>'
+    +'<line x1="'+x0+'" y1="'+( y0+floorL+18)+'" x2="'+x0+'" y2="'+( y0+floorL+26)+'" stroke="#555" stroke-width="1"/>'
+    +'<line x1="'+( x0+floorW)+'" y1="'+( y0+floorL+18)+'" x2="'+( x0+floorW)+'" y2="'+( y0+floorL+26)+'" stroke="#555" stroke-width="1"/>'
+    +'<text x="'+( x0+floorW/2)+'" y="'+( y0+floorL+36)+'" text-anchor="middle" font-size="10" fill="#333" font-weight="700">'+e.W+'&quot; wide</text>'
+    // Length arrow
+    +'<line x1="'+( x0-20)+'" y1="'+y0+'" x2="'+( x0-20)+'" y2="'+( y0+floorL)+'" stroke="#555" stroke-width="1"/>'
+    +'<line x1="'+( x0-24)+'" y1="'+y0+'" x2="'+( x0-16)+'" y2="'+y0+'" stroke="#555" stroke-width="1"/>'
+    +'<line x1="'+( x0-24)+'" y1="'+( y0+floorL)+'" x2="'+( x0-16)+'" y2="'+( y0+floorL)+'" stroke="#555" stroke-width="1"/>'
+    +'<text x="'+( x0-22)+'" y="'+( y0+Math.round(floorL/2)+4)+'" text-anchor="middle" font-size="10" fill="#333" font-weight="700" transform="rotate(-90,'+( x0-22)+','+( y0+Math.round(floorL/2))+')">'+e.L+'&quot; long</text>'
+    // Headroom badge (top right)
+    +'<rect x="'+( x0+floorW-52)+'" y="'+( y0+8)+'" width="48" height="22" rx="4" fill="'+hColor+'" opacity="0.15"/>'
+    +'<rect x="'+( x0+floorW-52)+'" y="'+( y0+8)+'" width="48" height="22" rx="4" fill="none" stroke="'+hColor+'" stroke-width="1"/>'
+    +'<text x="'+( x0+floorW-28)+'" y="'+( y0+24)+'" text-anchor="middle" font-size="9" fill="'+hColor+'" font-weight="700">'+e.H+'&quot; head</text>'
+    // Wheel arch label
+    +'<text x="'+( x0+archW/2)+'" y="'+( archY+archH/2+4)+'" text-anchor="middle" font-size="7" fill="#666">arch</text>'
+    +'<text x="'+( x0+floorW-archW/2)+'" y="'+( archY+archH/2+4)+'" text-anchor="middle" font-size="7" fill="#666">arch</text>'
+    +'</svg>';
+}
+
 function showEVProfile(key){
   var panel=document.getElementById('ev-profiles-individual');
   var allDiv=document.getElementById('ev-profiles-all');
@@ -229,6 +300,7 @@ function showEVProfile(key){
         '<div style="background:var(--bg);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:1.8rem;font-weight:700;color:'+(e.H<25?'var(--warn)':e.H>50?'var(--success)':e.color)+'">'+e.H+'"</div><div style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;font-weight:600;margin-top:.2rem">Headroom</div></div>'+
         '<div style="background:var(--bg);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:1.8rem;font-weight:700;color:'+e.color+'">'+e.down+'</div><div style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;font-weight:600;margin-top:.2rem">Cu ft (down)</div></div>'+
       '</div>'+
+      '<div style="margin-bottom:1.25rem">'+evFloorDiagram(e)+'</div>'+
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.25rem;font-size:.88rem">'+
         '<div style="display:flex;gap:.5rem"><span style="color:var(--text3);min-width:115px;font-weight:500">Max mattress:</span><strong>'+e.maxMat+'</strong></div>'+
         '<div style="display:flex;gap:.5rem;align-items:center"><span style="color:var(--text3);min-width:115px;font-weight:500">Floor:</span>'+flatBadge(e.flat)+'</div>'+
