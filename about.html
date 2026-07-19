@@ -212,6 +212,19 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
   nav a:not(.nav-cta){display:none}
   h2{font-size:1.4rem}
 }
+
+footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;margin-top:2rem}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:.75rem;text-align:center}
+.footer-brand{display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.footer-logo{font-family:var(--font-serif);font-size:1rem;font-weight:700;color:var(--primary)}
+.footer-tagline{font-size:.82rem;color:var(--text3);font-style:italic}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.25rem}
+.footer-nav a{font-size:.85rem;color:var(--text2);text-decoration:none;font-weight:500}
+.footer-nav a:hover{color:var(--primary)}
+.footer-legal{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1rem;font-size:.8rem;color:var(--text3)}
+.footer-legal a{color:var(--text3);text-decoration:underline}
+.footer-legal a:hover{color:var(--primary)}
+
 </style>
 <meta property="og:image" content="https://sleepinmyev.com/og-image.svg">
 <meta property="og:image:width" content="1200">
@@ -256,7 +269,7 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
       <div class="about-section">
         <h3>Our Data Sources</h3>
         <ul>
-          <li>Manufacturer websites (Luno, Exped, Therm-a-Rest, NEMO, Sea to Summit, Klymit)</li>
+          <li>Manufacturer websites (Luno, Exped, Therm-a-Rest, NEMO, Sea to Summit, Klymit, etc)</li>
           <li>EPA efficiency data for range calculations</li>
         </ul>
       </div>
@@ -265,26 +278,43 @@ footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;te
         <p>We use the industry-standard formula: <strong>100 lbs additional weight ≈ 1% range reduction</strong>. This is derived from EPA testing and real-world EV owner data. It accounts for rolling resistance and minor aerodynamic effects of interior cargo.</p>
         <p>Note: roof-mounted cargo has additional aerodynamic drag beyond just weight (typically 10-15% extra loss at highway speeds). We calculate mattress weight impact only — not roof box drag.</p>
       </div>
- <!--     <div class="about-section">
+  <!--    <div class="about-section">
         <h3>Affiliate Disclosure</h3>
         <p>This site earns affiliate commissions on purchases through Amazon and REI. These links don't affect our recommendations. We only list products we'd use ourselves, and we include products across all price ranges including budget options.</p>
-      </div> -->
+      </div>
+-->
       <div class="about-section">
         <h3>Phase 1 Coverage (Current)</h3>
-        <p>We currently cover 17 mattresses across 5 categories, with fitment data and sleeping dimensions for 22 EV models: Tesla Model Y/3/X/Cybertruck, Hyundai Ioniq 5/6, Kia EV6/EV9, Rivian R1S/R1T/R2, VW ID.4/ID.Buzz, Volvo EX40, BMW iX, Ford Mustang Mach-E/F-150 Lightning, Toyota bZ4X, Subaru Solterra, Chevrolet Bolt EV/Equinox EV, and Polestar 2. More models added regularly.</p>
+        <p>We currently cover multiple mattresses across 5 categories, with fitment data and sleeping dimensions for most popular EV models: Tesla, Hyundai, Kia, Rivian, VW, Volvo, BMW, Ford, Toyota, Subaru, Chevrolet, etc. More models added regularly.</p>
       </div>
     </section>
   </div>
 
 <footer>
-  <div style="font-family:var(--font-serif);font-size:.95rem;color:var(--primary);font-weight:700;margin-bottom:.3rem">Sleep In My EV</div>
-  <div>© 2026 sleepinmyev.com · <a href="index.html">Home</a> · <a href="compare.html">Compare</a> · <a href="guides.html">Guides</a> · <a href="blog/blog-index.html">Blog</a> · <a href="about.html">About</a></div>
-  <div style="margin-top:.3rem"><a href="cookies.html">Cookie Policy</a> · <a href="contact.html">Contact & Report an Error</a></div>
-  <div style="margin-top:.5rem;font-style:italic;color:#aaa">We're the camping buddy who actually measured the cargo floor.</div>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Sleep In My EV</span>
+      <span class="footer-tagline">The camping buddy who actually measured the cargo floor.</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="compare.html">Compare</a>
+      <a href="guides.html">Guides</a>
+      <a href="blog/blog-index.html">Blog</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="footer-legal">
+      <span>© 2026 sleepinmyev.com</span>
+      <a href="cookies.html">Cookie Policy</a>
+      <a href="contact.html">Contact & Report an Error</a>
+    </div>
+  </div>
 </footer>
 
 
 
+<script src="js/data.js"></script>
+<script src="js/shared.js"></script>
 <script></script>
 
 
@@ -298,22 +328,51 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 </script>
 
-<!-- Cookie notice banner -->
-<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#2C2C2C;color:#fff;padding:1rem 1.5rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.88rem">
-  <span>We don't currently set any tracking cookies. Affiliate links (REI, Amazon, Luno) may set their own. <a href="cookies.html" style="color:#2DA06F;text-decoration:underline">Cookie Policy</a></span>
-  <button onclick="dismissCookieBanner()" style="background:#1D6B4E;color:#fff;border:none;border-radius:5px;padding:.5rem 1.25rem;font-weight:700;cursor:pointer;font-size:.88rem;white-space:nowrap;font-family:inherit">Got it ✓</button>
+<!-- Cookie consent banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#2C2C2C;color:#fff;z-index:9999;padding:1.1rem 1.5rem;box-shadow:0 -2px 12px rgba(0,0,0,.3)">
+  <div style="max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+    <div style="flex:1;min-width:220px;font-size:.88rem;line-height:1.5">
+      <strong style="display:block;margin-bottom:.25rem">We use cookies</strong>
+      We use Google Analytics to understand how visitors use this site. Clicking product links may take you to third-party retailers who set their own cookies.
+      <a href="cookies.html" style="color:#2DA06F;text-decoration:underline;margin-left:.25rem">Cookie Policy</a>
+    </div>
+    <div style="display:flex;gap:.75rem;flex-shrink:0">
+      <button onclick="rejectCookies()" style="background:transparent;color:#aaa;border:1px solid #555;border-radius:5px;padding:.5rem 1rem;font-size:.85rem;cursor:pointer;font-family:inherit">Decline</button>
+      <button onclick="acceptCookies()" style="background:#1D6B4E;color:#fff;border:none;border-radius:5px;padding:.5rem 1.25rem;font-weight:700;cursor:pointer;font-size:.88rem;font-family:inherit">Accept ✓</button>
+    </div>
+  </div>
 </div>
 <script>
 (function(){
-  if(!localStorage.getItem('cookie-ok')){
-    var b=document.getElementById('cookie-banner');
-    if(b) b.style.display='flex';
+  var consent = localStorage.getItem('cookie-consent');
+  if(!consent){
+    var b = document.getElementById('cookie-banner');
+    if(b) b.style.display = 'block';
+  } else if(consent === 'accepted'){
+    loadGA();
   }
 })();
-function dismissCookieBanner(){
-  localStorage.setItem('cookie-ok','1');
-  var b=document.getElementById('cookie-banner');
-  if(b) b.style.display='none';
+function loadGA(){
+  if(window._gaLoaded) return;
+  window._gaLoaded = true;
+  var s = document.createElement('script');
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=G-7FN0PS8WNR';
+  s.async = true;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', 'G-7FN0PS8WNR');
+}
+function acceptCookies(){
+  localStorage.setItem('cookie-consent','accepted');
+  document.getElementById('cookie-banner').style.display='none';
+  loadGA();
+}
+function rejectCookies(){
+  localStorage.setItem('cookie-consent','rejected');
+  document.getElementById('cookie-banner').style.display='none';
 }
 </script>
 </body>
