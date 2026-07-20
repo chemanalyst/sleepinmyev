@@ -216,20 +216,33 @@ tr:hover td{background:rgba(15,110,86,.03)}
 footer{background:var(--bg);border-top:1px solid var(--border);padding:1.5rem;text-align:center;font-size:.82rem;color:var(--text3);margin-top:3rem}
 
 /* RESPONSIVE */
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;border:none;background:transparent;z-index:210}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid var(--primary);box-shadow:0 4px 16px rgba(0,0,0,.12);z-index:200;padding:.75rem 1.5rem 1rem;flex-direction:column;gap:.25rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:var(--text2);text-decoration:none;font-size:1rem;font-weight:500;padding:.65rem .5rem;border-bottom:1px solid var(--border)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .nav-cta{background:var(--primary);color:#fff!important;border-radius:6px;padding:.75rem 1rem;text-align:center;margin-top:.25rem;border:none}
 @media(max-width:768px){
-  .hamburger{display:flex!important}
-  .hero h1{font-size:1.6rem}
+  .hamburger{display:flex}
+  
+  nav a:not(.nav-cta){display:none}
+.hero h1{font-size:1.6rem}
   .stat-strip{grid-template-columns:repeat(2,1fr)}
-  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;border:none;background:transparent;z-index:210}
-  .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
-  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .hamburger.open span:nth-child(2){opacity:0}
-  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .mobile-menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:2px solid var(--primary);box-shadow:0 4px 16px rgba(0,0,0,.12);z-index:200;padding:.75rem 1.5rem 1rem;flex-direction:column;gap:.25rem}
-  .mobile-menu.open{display:flex}
-  .mobile-menu a{color:var(--text2);text-decoration:none;font-size:1rem;font-weight:500;padding:.65rem .5rem;border-bottom:1px solid var(--border)}
-  .mobile-menu a:last-child{border-bottom:none}
-  .mobile-menu .nav-cta{background:var(--primary);color:#fff!important;border-radius:6px;padding:.75rem 1rem;text-align:center;margin-top:.25rem;border:none}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   nav a:not(.nav-cta){display:none}
   h2{font-size:1.4rem}
 }
@@ -249,7 +262,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 
 
 @media(max-width:768px){
-  .hamburger{display:flex!important}}
+  .hamburger{display:flex}}
 </style>
 <meta property="og:image" content="https://sleepinmyev.com/og-image.svg">
 <meta property="og:image:width" content="1200">
