@@ -74,6 +74,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 .footer-legal a{color:var(--text3);text-decoration:underline}
 .footer-legal a:hover{color:var(--primary)}
 
+
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;border:none;background:transparent;z-index:210}
 .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -85,8 +86,9 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu .nav-cta{background:var(--primary);color:#fff!important;border-radius:6px;padding:.75rem 1rem;text-align:center;margin-top:.25rem;border:none}
 @media(max-width:768px){
-  .hamburger{display:flex!important}
-  .hamburger{display:none}
+  .hamburger{display:flex}
+  
+  nav a:not(.nav-cta){display:none}
 }
 </style>
 </head>
@@ -182,11 +184,10 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
     </div>
   </div>
 
- 
 
   <h2>Our Commitment to Accuracy</h2>
   <p>Every spec on this site has been verified against at least one primary source — manufacturer pages, retailer listings, or owner-verified measurements. When we receive a correction report we verify it independently before updating.</p>
-  <p>If you own an EV and have measured your actual sleeping dimensions, that owner data is the most valuable kind.</p>
+  <p>If you own an EV and have measured your actual sleeping dimensions, that owner data is the most valuable kind. </p>
 
 </div>
 
