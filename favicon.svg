@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="32" fill="#1D6B4E"/>
+  <!-- EV car body -->
+  <rect x="8" y="34" width="48" height="16" rx="4" fill="#fff" opacity="0.95"/>
+  <!-- Roof -->
+  <path d="M16 34 C19 22 25 18 32 18 C39 18 45 22 48 34Z" fill="#fff" opacity="0.95"/>
+  <!-- Window -->
+  <path d="M19 33 C21 24 26 21 32 21 C38 21 43 24 45 33Z" fill="#1D6B4E" opacity="0.7"/>
+  <!-- Wheels -->
+  <circle cx="18" cy="50" r="7" fill="#1D6B4E"/>
+  <circle cx="18" cy="50" r="4" fill="#fff" opacity="0.3"/>
+  <circle cx="46" cy="50" r="7" fill="#1D6B4E"/>
+  <circle cx="46" cy="50" r="4" fill="#fff" opacity="0.3"/>
+  <!-- Moon -->
+  <path d="M50 10 C46 13 45 19 47 24 C42 22 40 16 43 11 C45 7 50 6 54 8 C52 8.5 50.5 9 50 10Z" fill="#C94E26"/>
+  <!-- Z -->
+  <text x="52" y="9" font-family="Georgia,serif" font-size="8" fill="#C94E26" font-weight="700">z</text>
+</svg>
