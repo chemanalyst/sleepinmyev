@@ -10,8 +10,16 @@ function rvClass(v){return v<4?'rv-low':v<7?'rv-mid':'rv-high';}
 
 let currentEV='';
 function viewFullEVProfile(){
-  if(!currentEV) return;
-  window.location='guides.html?ev='+encodeURIComponent(currentEV);
+  if(!currentEV) {
+    alert('Please select an EV first using the dropdown above.');
+    return;
+  }
+  var url = 'guides.html?ev=' + encodeURIComponent(currentEV);
+  try {
+    window.location.href = url;
+  } catch(e) {
+    window.location = url;
+  }
 }
 
 
@@ -38,6 +46,8 @@ function onEVSelect(val){
     document.getElementById('mini-mat').textContent=e.maxMat;
     if(label) label.textContent='Showing fit rating for '+e.name+' — click any row for full details';
     if(colHeader) colHeader.textContent=e.name+' Fit';
+    var profileLink=document.getElementById('full-profile-link');
+    if(profileLink) profileLink.href='guides.html?ev='+encodeURIComponent(val);
   } else {
     mini.style.display='none';
     clearBtn.style.display='none';
@@ -221,9 +231,6 @@ function showBlogIndex(){
   document.getElementById('blog-index').style.display='block';
   window.scrollTo({top:0,behavior:'smooth'});
 }
-
-// Only call renderTable on pages that have the comparison table
-if(document.getElementById('tbody')) renderTable(mattresses);
 
 // Only init EV dimensions table on pages that have it
 document.addEventListener('DOMContentLoaded', function(){
