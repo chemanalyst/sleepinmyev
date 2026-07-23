@@ -46,8 +46,6 @@ function onEVSelect(val){
     document.getElementById('mini-mat').textContent=e.maxMat;
     if(label) label.textContent='Showing fit rating for '+e.name+' — click any row for full details';
     if(colHeader) colHeader.textContent=e.name+' Fit';
-    var profileLink=document.getElementById('full-profile-link');
-    if(profileLink) profileLink.href='guides.html?ev='+encodeURIComponent(val);
   } else {
     mini.style.display='none';
     clearBtn.style.display='none';
@@ -79,7 +77,6 @@ function renderTable(data){
           <span class="range-mini">${m.range_impact}%</span>
         </div>
       </td>
-      <td><span class="stars">${'★'.repeat(Math.floor(m.rating))}</span> ${m.rating}</td>
     </tr>`).join('');
   document.getElementById('count').textContent=data.length;
   document.getElementById('total-count').textContent=mattresses.length;
