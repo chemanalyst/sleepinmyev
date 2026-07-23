@@ -11,12 +11,18 @@
   gtag('config', 'G-7FN0PS8WNR');
 </script>
 <meta charset="UTF-8">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Compare EV Camping Mattresses — Sleep In My EV</title>
-<meta name="description" content="Filter 15 verified camping mattresses by type, price, weight and EV fitment. See which mattresses fit your Tesla Model Y, Ioniq 5, EV9, Rivian R1S and 19 more.">
+<meta name="description" content="Filter 18 verified camping mattresses by type, price, weight and EV fitment. See which mattresses fit your Tesla Model Y, Ioniq 5, EV9, Rivian R1S and 19 more.">
 <link rel="canonical" href="https://sleepinmyev.com/compare.html">
 <meta property="og:title" content="Compare EV Camping Mattresses — Sleep In My EV">
-<meta property="og:description" content="Filter 15 verified camping mattresses by type, price, weight and EV fitment. See which mattresses fit your Tesla Model Y, Ioniq 5, EV9, Rivian R1S and 19 more.">
+<meta property="og:description" content="Filter 18 verified camping mattresses by type, price, weight and EV fitment. See which mattresses fit your Tesla Model Y, Ioniq 5, EV9, Rivian R1S and 19 more.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sleepinmyev.com/compare.html">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -475,22 +481,19 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 <script src="js/data.js"></script>
 <script src="js/shared.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  renderTable(mattresses);
-});
-</script>
-
-<script>
-
 document.addEventListener('DOMContentLoaded', function(){
+  // Render table
   if(document.getElementById('tbody')) renderTable(mattresses);
 
-  // If arriving with ?ev=key (from guides EV profile button), pre-select that EV
+  // Pre-select EV if arriving via ?ev= URL param (e.g. from Guides Full Profile)
   var params = new URLSearchParams(window.location.search);
   var evKey  = params.get('ev');
   if(evKey){
     var sel = document.getElementById('f-vehicle');
-    if(sel){ sel.value = evKey; onEVSelect(evKey); }
+    if(sel){
+      sel.value = evKey;
+      if(typeof onEVSelect === 'function') onEVSelect(evKey);
+    }
   }
 });
 </script>
