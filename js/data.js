@@ -300,7 +300,10 @@ function showEVProfile(key){
         '<div style="background:var(--bg);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:1.8rem;font-weight:700;color:'+(e.H<25?'var(--warn)':e.H>50?'var(--success)':e.color)+'">'+e.H+'"</div><div style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;font-weight:600;margin-top:.2rem">Headroom</div></div>'+
         '<div style="background:var(--bg);border-radius:6px;padding:1rem;text-align:center"><div style="font-size:1.8rem;font-weight:700;color:'+e.color+'">'+e.down+'</div><div style="font-size:.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;font-weight:600;margin-top:.2rem">Cu ft (down)</div></div>'+
       '</div>'+
-      '<div style="margin-bottom:1.25rem">'+evFloorDiagram(e)+'</div>'+
+      '<div style="margin-bottom:1.25rem;background:var(--bg);border-radius:8px;padding:.5rem">'+
+      '<div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text3);margin-bottom:.4rem;padding-left:.25rem">Cargo Floor — Top View</div>'+
+      evFloorDiagram(e)+
+      '</div>'+
       '<div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-bottom:1.25rem;font-size:.88rem">'+
         '<div style="display:flex;gap:.5rem"><span style="color:var(--text3);min-width:115px;font-weight:500">Max mattress:</span><strong>'+e.maxMat+'</strong></div>'+
         '<div style="display:flex;gap:.5rem;align-items:center"><span style="color:var(--text3);min-width:115px;font-weight:500">Floor:</span>'+flatBadge(e.flat)+'</div>'+
@@ -336,22 +339,6 @@ function showAllEVs(){
   document.getElementById('ev-profiles-all').style.display='block';
 }
 
-function viewFullEVProfile(){
-  if(!currentEV) return;
-  // 1. Navigate to Guides page
-  showPage('guides');
-  // 2. Activate the EV Dimensions tab
-  const tabBtn = document.getElementById('tab-btn-ev-dims');
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-  if(tabBtn) tabBtn.classList.add('active');
-  const pane = document.getElementById('t-ev-dims');
-  if(pane) pane.classList.add('active');
-  // 3. Set the EV select and show the profile
-  const sel = document.getElementById('ev-select');
-  if(sel) sel.value = currentEV;
-  showEVProfile(currentEV);
-}
 document.addEventListener('DOMContentLoaded',renderAllEVTable);
 
 

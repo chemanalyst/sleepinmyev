@@ -9,6 +9,10 @@ function fitClass(f){return f==='Good'?'fit-good':f==='Fair'?'fit-fair':'fit-poo
 function rvClass(v){return v<4?'rv-low':v<7?'rv-mid':'rv-high';}
 
 let currentEV='';
+function viewFullEVProfile(){
+  if(!currentEV) return;
+  window.location='guides.html?ev='+encodeURIComponent(currentEV);
+}
 
 
 function renderFitCell(m){
