@@ -11,6 +11,12 @@
   gtag('config', 'G-7FN0PS8WNR');
 </script>
 <meta charset="UTF-8">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cookie Policy — Sleep In My EV</title>
 <meta name="description" content="Cookie policy for sleepinmyev.com — what cookies we use, why, and how to control them.">
@@ -54,6 +60,7 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 .footer-legal a{color:var(--text3);text-decoration:underline}
 .footer-legal a:hover{color:var(--primary)}
 
+
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;border:none;background:transparent;z-index:210}
 .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:.25s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -65,8 +72,9 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 .mobile-menu a:last-child{border-bottom:none}
 .mobile-menu .nav-cta{background:var(--primary);color:#fff!important;border-radius:6px;padding:.75rem 1rem;text-align:center;margin-top:.25rem;border:none}
 @media(max-width:768px){
-  .hamburger{display:flex!important}
-  .hamburger{display:none}
+  .hamburger{display:flex}
+  
+  nav a:not(.nav-cta){display:none}
 }
 </style>
 </head>
@@ -117,18 +125,17 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
     <tbody>
       <tr><td>Google Analytics</td><td>Third-party analytics</td><td>Page views, session data, traffic sources — all anonymised</td><td><span class="tag">Consent-only</span></td></tr>
       <tr><td>Advertising / retargeting</td><td>Third-party</td><td>Ad targeting</td><td><span class="tag tag-none">Not used</span></td></tr>
-      <tr><td>Affiliate link tracking</td><td>Third-party</td><td>Commission tracking on REI, Amazon, Luno</td><td><span class="tag">Via retailer</span></td></tr>
+      <tr><td>Affiliate link tracking</td><td>Third-party</td><td>Commission tracking</td><td><span class="tag">Via retailer</span></td></tr>
       <tr><td>Cookie consent preference</td><td>First-party (localStorage)</td><td>Remembers your Accept / Decline choice</td><td><span class="tag">Always</span></td></tr>
     </tbody>
   </table>
-
+<!--
   <h2>Affiliate Links</h2>
   <p>When you click a "View product →" link and visit REI, Amazon, or Luno, those retailers may set their own cookies on your device for affiliate tracking, personalisation, and analytics. We earn a small commission if you make a purchase — at no extra cost to you. Those retailers' cookie and privacy policies apply once you leave our site.</p>
-
+-->
   <h2>Your Consent</h2>
   <p>When you first visit the site, a banner asks you to accept or decline cookies. If you accept, Google Analytics loads and begins collecting anonymised data. If you decline, no analytics cookies are set. You can change your choice at any time by clearing your browser's localStorage for this site, or by using your browser's cookie controls.</p>
 
- 
 
   <h2>Your Controls</h2>
   <p>You can control cookies through your browser settings. Most browsers allow you to block, delete, or be notified about cookies. Note that blocking cookies may affect how some websites you visit work — but since we set none, it won't affect this site.</p>
