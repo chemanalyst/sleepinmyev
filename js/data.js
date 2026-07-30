@@ -100,7 +100,7 @@ function updateHeightRec(){
       : `<span style="background:var(--warn-bg);color:var(--warn);padding:.15rem .45rem;border-radius:3px;font-size:.7rem;font-weight:700">No Camp Mode</span>`;
     const borderCol = fit.label==='Comfortable'||fit.label==='Good Fit' ? ev.color : fit.label==='Tight' ? '#c47a00' : '#ccc';
     return `
-      <div style="background:var(--bg);border:2px solid ${borderCol};border-radius:8px;padding:1.1rem;transition:.2s;cursor:pointer" onclick="showPage('compare');onEVSelect('${ev.key}');document.getElementById('f-vehicle').value='${ev.key}'">
+      <div style="background:var(--bg);border:2px solid ${borderCol};border-radius:8px;padding:1.1rem;transition:.2s;cursor:pointer" onclick="window.location.href='compare.html?ev='+encodeURIComponent('${ev.key}')">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem;gap:.5rem">
           <div style="font-weight:700;font-size:.92rem;color:var(--text)">${ev.name}</div>
           <span class="fit-badge ${fit.cls}" style="white-space:nowrap;font-size:.72rem">${fit.label}</span>
