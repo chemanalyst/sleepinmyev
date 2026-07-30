@@ -9,7 +9,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-7FN0PS8WNR');
-</script>
+</script
 <meta charset="UTF-8">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -270,6 +270,22 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://sleepinmyev.com/og-image.svg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Sleep In My EV",
+  "url": "https://sleepinmyev.com",
+  "description": "Verified sleeping dimensions for 29 EVs. Real mattress specs, R-values, weight and EV fitment ratings for EV campers.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "email": "hello@sleepinmyev.com",
+    "url": "https://sleepinmyev.com/contact.html"
+  },
+  "sameAs": []
+}
+</script>
 </head>
 <body>
 <header>
@@ -304,33 +320,44 @@ footer{background:#fff;border-top:1px solid var(--border);padding:2rem 1.5rem;ma
     <section style="padding-top:2rem">
       <h2 style="font-family:var(--font-serif)">About This Guide</h2>
       <p class="section-sub">EV camping deserves better data than generic gear sites provide.</p>
-      <div class="about-section">
-        <h3>Why We Built This</h3>
+ 
+        <h2>Why We Built This</h2>
         <p>When we started camping in EVs, we noticed that mainstream mattress reviews don't address range impact, EV-specific fitment, or how Camp Mode changes insulation needs. Traditional guides tell you to buy the warmest, heaviest mattress. For EV campers, that advice is often wrong.</p>
-        <p>This guide focuses exclusively on what EV owners actually need: lightweight options, fitment specs by model, and insulation guidance optimized for vehicles with climate control.</p>
-      </div>
-      <div class="about-section">
-        <h3>Our Data Sources</h3>
-        <ul>
-          <li>Manufacturer websites (Luno, Exped, Therm-a-Rest, NEMO, Sea to Summit, Klymit)</li> 
-          <li>EPA efficiency data for range calculations</li>
-          
-        </ul>
-      </div>
-      <div class="about-section">
-        <h3>Range Impact Methodology</h3>
-        <p>We use the industry-standard formula: <strong>100 lbs additional weight ≈ 1% range reduction</strong>. This is derived from EPA testing and real-world EV owner data. It accounts for rolling resistance and minor aerodynamic effects of interior cargo.</p>
-        <p>Note: roof-mounted cargo has additional aerodynamic drag beyond just weight (typically 10-15% extra loss at highway speeds). We calculate mattress weight impact only — not roof box drag.</p>
-      </div>
-  <!--    <div class="about-section">
-        <h3>Affiliate Disclosure</h3>
-        <p>This site earns affiliate commissions on purchases through Amazon and REI. These links don't affect our recommendations. We only list products we'd use ourselves, and we include products across all price ranges including budget options.</p>
-      </div> -->
-      <div class="about-section">
-        <h3>Phase 1 Coverage (Current)</h3>
-        <p>We currently cover multiple mattresses across 5 categories, with fitment data and sleeping dimensions for most popular EV models: Tesla, Hyundai, Kia, Rivian, VW, Volvo, BMW, Ford, Toyota, Subaru, Chevrolet, Nissan, Vinfast and Polestar. More models added regularly.</p>
-      </div>
-    </section>
+        <p>This guide focuses exclusively on what EV owners actually need: lightweight options, fitment specs by model, and insulation guidance optimized for vehicles with climate control.</p> 
+  </section>
+  <section id="methodology" aria-labelledby="methodology-heading">
+    <h2 id="methodology-heading">Our Measurement Methodology</h2>
+    <p>Every sleeping dimension on this site is verified against at least one of the following sources, in order of preference:</p>
+
+    <ol style="margin:.75rem 0 1rem 1.5rem;color:var(--text2);line-height:1.8">
+      <li><strong>Verified measurements</strong> — direct measurements by us</li>
+      <li><strong>Manufacturer cargo specifications</strong> — used only as a starting point; manufacturer specs measure at different points than floor-level sleeping dimensions and are consistently optimistic</li>
+       <li><strong>EPA efficiency data for range calculations<strong></li>
+     </ol>
+
+    <p>For mattress specifications, we verify R-value, weight, and thickness against the manufacturer's own product page, REI's product listing, and at least one independent retailer. Where conflicts exist between sources, we use the manufacturer's stated value and note the discrepancy.</p>
+
+    <h3 style="margin-top:1.5rem">How We Calculate EV Sleeping Dimensions</h3>
+    <p>We measure three values for every EV:</p>
+    <ul style="margin:.5rem 0 1rem 1.5rem;color:var(--text2);line-height:1.8">
+      <li><strong>Length</strong> — from the rear hatch sill to the back of the front headrest, with rear seats fully folded and front seats in standard driving position. We note separately the extended length achievable by pushing the front passenger seat forward.</li>
+      <li><strong>Width</strong> — measured at the narrowest usable point, which is almost always at the rear wheel arches — not at the cargo opening, which is consistently wider. This is the critical number for mattress selection.</li>
+      <li><strong>Headroom</strong> — from the cargo floor to the ceiling at the widest interior point.</li>
+    </ul>
+
+    <h3 style="margin-top:1.5rem">Overnight Battery Drain Calculations</h3>
+    <p>Battery drain estimates are calculated from the EV's total battery capacity and published HVAC power draw data. We provide two figures: mild temperature (~15°C/59°F) and cold temperature (~-5°C/23°F). EVs with heat pumps (noted in each profile) are significantly more efficient in cold conditions. All figures assume 8 hours of climate control at a moderate cabin temperature setting.</p>
+
+    <h3 style="margin-top:1.5rem">Mattress Fitment Ratings</h3>
+    <p>Each mattress receives a fitment rating (Good / Fair / Poor) for each EV based on:</p>
+    <ul style="margin:.5rem 0 1rem 1.5rem;color:var(--text2);line-height:1.8">
+      <li><strong>Good</strong> — mattress fits the EV floor with at least 2 inches of clearance on all sides</li>
+      <li><strong>Fair</strong> — mattress fits but requires the front seat to be moved forward, or fits with less than 2 inches of clearance</li>
+      <li><strong>Poor</strong> — mattress is too wide or too long for comfortable sleeping in that EV</li>
+    </ul>
+
+    <p>When we receive a correction report via our <a href="contact.html">contact page</a>, we verify it against primary sources before updating. We note the date of correction and the source used.</p>
+  </section>
   </div>
 
 <footer>
